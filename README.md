@@ -1,5 +1,6 @@
 Talend 6.0.0
 ====
+TOS_DI-20150507_2137-V6.0.0M5
 
 ejemplo de job talend
 Pasa parametros por la url y generara la fecha del sistema usando tJava
