@@ -1,31 +1,15 @@
 Talend 6.0.0
 ====
+Herramientas usadas:
 TOS_DI-20150507_2137-V6.0.0M5
+JDK 8.0
+Glassfish 4.1
 
-ejemplo de job talend
+Ejemplo de job talend
 Pasa parametros por la url y generara la fecha del sistema usando tJava
 https://www.talendforge.org/tutorials/tutorial.php?idTuto=38
 
-//Obtiene la fecha del servidor
-Date fchbase=TalendDate.getCurrentDate();
-//Inicial: Guarda la fecha de ayer
-context.fechaInicio = TalendDate.addDate(fchbase,-1,"dd");
-//Cambia la fecha a "00:00:00"
-context.fechaInicio=TalendDate.setDate(context.fechaInicio,0,"HH");
-context.fechaInicio=TalendDate.setDate(context.fechaInicio,0,"mm");
-//resetea los segundos
-Calendar c = Calendar.getInstance();
-c.setTime(context.fechaInicio);
-c.set(Calendar.SECOND,0);
-context.fechaInicio=c.getTime();
+Para probar el web service pasando parametros
+http://localhost:8080/Pruebas_0.1/services/Pruebas?method=runJob&arg1=--context_param%20desde=2015-08-29&arg2=--context_param%20hasta=2015-08-29
 
-//Final: guarda fecha de ayer
-context.fechaFin = TalendDate.addDate(fchbase,-1,"dd");
-//Cambia la fecha a "23:59:59"
-context.fechaFin = TalendDate.setDate(context.fechaFin,23,"HH");
-context.fechaFin = TalendDate.setDate(context.fechaFin,59,"mm");
-//resetea los segundos
-Calendar s = Calendar.getInstance();
-s.setTime(context.fechaFin);
-s.set(Calendar.SECOND,59);
-context.fechaFin=s.getTime();
+Todos los subjobs deben estar interconectados.
