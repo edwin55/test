@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+	<id>bin</id>
+	<formats>
+		<format>zip</format>
+		<format>tar.gz</format>
+	</formats>
+
+	<files>
+		<file> <!-- jobInfo.properties -->
+			<source>${basedir}/src/main/templates/jobInfo_template.properties
+			</source>
+			<outputDirectory>.</outputDirectory>
+			<destName>jobInfo.properties</destName>
+			<filtered>true</filtered>
+		</file>
+		<file> <!-- sh -->
+			<source>${basedir}/src/main/templates/Job_run_template.sh</source>
+			<outputDirectory>${talend.job.name}</outputDirectory>
+			<destName>${talend.job.name}_run.sh</destName>
+			<filtered>true</filtered>
+		</file>
+		<file> <!-- bat -->
+			<source>${basedir}/src/main/templates/Job_run_template.bat</source>
+			<outputDirectory>${talend.job.name}</outputDirectory>
+			<destName>${talend.job.name}_run.bat</destName>
+			<filtered>true</filtered>
+		</file>
+	</files>
+
+	<fileSets>
+		<fileSet><!-- templates -->
+			<directory>${basedir}/src/main/templates/</directory>
+			<outputDirectory>${talend.job.name}/src/main/templates/</outputDirectory>
+			<includes>
+				<include>**</include>
+			</includes>
+		</fileSet>
+		<fileSet><!-- some resources -->
+			<directory>${basedir}/src/main/resources/</directory>
+			<outputDirectory>${talend.job.name}/src/main/resources/</outputDirectory>
+			<includes>
+				<include>xmlMappings/**</include>
+				<include>sqltemplates/**</include>
+				<include>rules/**</include>
+				<include>log4j.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet><!-- assembly.xml -->
+			<directory>${basedir}/src/main/assemblies/</directory>
+			<outputDirectory>${talend.job.name}/src/main/assemblies/</outputDirectory>
+			<includes>
+				<include>assembly_${talend.job.name}.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet><!-- pom_*.xml -->
+			<directory>${basedir}</directory>
+			<outputDirectory>${talend.job.name}</outputDirectory>
+			<includes>
+				<include>pom.xml</include>
+				<include>pom_routines.xml</include>
+				<include>pom_${talend.job.name}.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet> <!-- add items -->
+			<directory>${basedir}/src/main/items/</directory>
+			<outputDirectory>${talend.job.name}/src/main/items/</outputDirectory>
+			<includes>
+				<include>**</include>
+			</includes>
+		</fileSet>
+		<fileSet> <!-- add java resouces -->
+			<directory>${project.build.sourceDirectory}</directory>
+			<outputDirectory>${talend.job.name}/src/main/java/</outputDirectory>
+			<includes>
+				<include>routines/**</include>
+				<include>${talend.job.path}/**</include>
+			</includes>
+		</fileSet>
+		<fileSet><!-- add context resources -->
+			<directory>${basedir}/src/main/resources/</directory>
+			<outputDirectory>${talend.job.name}/src/main/resources/</outputDirectory>
+			<includes>
+				<include>${talend.job.path}/**</include>
+			</includes>
+		</fileSet>
+		<fileSet><!-- add context resources for running -->
+			<directory>${basedir}/src/main/resources/</directory>
+			<outputDirectory>${talend.job.name}</outputDirectory>
+			<includes>
+				<include>${talend.job.path}/**</include>
+			</includes>
+		</fileSet>
+		<!-- If have children jobs, will add here -->
+	</fileSets>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>${talend.job.name}/lib</outputDirectory>
+			<includes>
+				<include>org.talend.libraries:*</include>
+			</includes>
+			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}
+			</outputFileNameMapping>
+			<useProjectArtifact>false</useProjectArtifact>
+		</dependencySet>
+		<dependencySet>
+			<outputDirectory>${talend.job.name}/lib</outputDirectory>
+			<excludes>
+				<exclude>org.talend.libraries:*</exclude>
+			</excludes>
+			<useProjectArtifact>false</useProjectArtifact>
+		</dependencySet>
+	</dependencySets>
+	<moduleSets>
+		<moduleSet>
+			<useAllReactorProjects>true</useAllReactorProjects>
+			<includes>
+				<include>org.talend.job:*</include>
+			</includes>
+			<binaries>
+				<outputDirectory>${talend.job.name}</outputDirectory>
+				<includeDependencies>false</includeDependencies>
+				<unpack>false</unpack>
+				<!-- <outputFileNameMapping>${module.artifactId}_${module.version}.${module.extension} 
+					</outputFileNameMapping> -->
+			</binaries>
+		</moduleSet>
+		<moduleSet><!-- only for routines -->
+			<useAllReactorProjects>true</useAllReactorProjects>
+			<includes>
+				<include>org.talend.code:*</include>
+			</includes>
+			<binaries>
+				<outputDirectory>${talend.job.name}/lib</outputDirectory>
+				<includeDependencies>false</includeDependencies>
+				<unpack>false</unpack>
+				<outputFileNameMapping>${module.artifactId}.${module.extension}
+				</outputFileNameMapping>
+			</binaries>
+		</moduleSet>
+	</moduleSets>
+</assembly>
