@@ -32,7 +32,6 @@
             <children xsi:type="basic:PartSashContainer" xmi:id="_oiCZsnjZEeWHBpx5Vxbfwg" containerData="1411" selectedElement="_oiCZs3jZEeWHBpx5Vxbfwg">
               <children xsi:type="basic:PartStack" xmi:id="_oiCZs3jZEeWHBpx5Vxbfwg" elementId="navigatorLayout" containerData="6000" selectedElement="_oiCZtHjZEeWHBpx5Vxbfwg">
                 <tags>newtablook</tags>
-                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_oiCZtHjZEeWHBpx5Vxbfwg" elementId="org.talend.repository.cnf.view" ref="_ohfnIHjZEeWHBpx5Vxbfwg"/>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_oiCZtXjZEeWHBpx5Vxbfwg" elementId="outlineCodeLayout" visible="false" containerData="4000" selectedElement="_oiCZtnjZEeWHBpx5Vxbfwg">
@@ -43,11 +42,13 @@
               </children>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_oiCZuHjZEeWHBpx5Vxbfwg" containerData="8589" selectedElement="_oiCZuXjZEeWHBpx5Vxbfwg" horizontal="true">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_oiCZuXjZEeWHBpx5Vxbfwg" containerData="8000" selectedElement="_oiCZunjZEeWHBpx5Vxbfwg">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_oiCZuXjZEeWHBpx5Vxbfwg" containerData="8000" selectedElement="_oiCZu3jZEeWHBpx5Vxbfwg">
                 <children xsi:type="advanced:Placeholder" xmi:id="_oiCZunjZEeWHBpx5Vxbfwg" elementId="org.eclipse.ui.editorss" containerData="3612" ref="_ohBtEHjZEeWHBpx5Vxbfwg"/>
                 <children xsi:type="basic:PartStack" xmi:id="_oiCZu3jZEeWHBpx5Vxbfwg" elementId="bottomLayout" visible="false" containerData="6388" selectedElement="_oiCZv3jZEeWHBpx5Vxbfwg">
                   <tags>newtablook</tags>
                   <tags>Minimized</tags>
+                  <tags>active</tags>
+                  <tags>noFocus</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_oiCZvHjZEeWHBpx5Vxbfwg" elementId="org.talend.designer.core.ui.views.jobsettings.JobSettingsView" ref="_ohiqcHjZEeWHBpx5Vxbfwg"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_oiCZvXjZEeWHBpx5Vxbfwg" elementId="org.talend.designer.core.ui.views.ContextsView" ref="_ohjRgHjZEeWHBpx5Vxbfwg"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_oiCZvnjZEeWHBpx5Vxbfwg" elementId="org.talend.designer.core.ui.views.properties.ComponentSettingsView" ref="_ohj4kHjZEeWHBpx5Vxbfwg"/>
@@ -101,8 +102,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:Talend</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_o8zDEHjZEeWHBpx5Vxbfwg" elementId="org.talend.repository.cnf.view">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -173,6 +172,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Talend</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="__Z1-QHjhEeWNh73uwOWUKg" elementId="org.talend.designer.runprocess.ui.views.processview">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>

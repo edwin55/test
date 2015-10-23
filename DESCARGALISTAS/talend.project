@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_1UJFIHjXEeWHBpx5Vxbfwg" label="DescargaListas" description="Descarga las listas negras desde la OFAC y ONU" language="java" technicalLabel="DESCARGALISTAS" local="true" author="_1W2a4HjXEeWHBpx5Vxbfwg" productVersion="Talend Open Studio for Data Integration-6.0.0.20150507_2137-M5" itemsRelationVersion="1.3">
+  <TalendProperties:Project xmi:id="_1UJFIHjXEeWHBpx5Vxbfwg" label="descargalistas" description="" language="java" technicalLabel="DESCARGALISTAS" local="true" author="_1W2a4HjXEeWHBpx5Vxbfwg" productVersion="Talend Open Studio for Data Integration-6.0.0.20150507_2137-M5" itemsRelationVersion="1.3">
     <technicalStatus xmi:id="_Ne48cHjZEeWHBpx5Vxbfwg" label="development" code="DEV"/>
     <technicalStatus xmi:id="_Ne48cXjZEeWHBpx5Vxbfwg" label="testing" code="TEST"/>
     <technicalStatus xmi:id="_Ne48cnjZEeWHBpx5Vxbfwg" label="production" code="PROD"/>

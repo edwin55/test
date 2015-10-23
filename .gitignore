@@ -2,3 +2,4 @@
 *.class
 .JETEmitters/
 .metadata/
+!.Java/target/classes/

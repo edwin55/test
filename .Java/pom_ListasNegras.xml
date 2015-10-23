@@ -16,7 +16,7 @@
     <talend.job.package>descargalistas.listasnegras_0_1</talend.job.package>
     <talend.job.sh.classpath>$ROOT_PATH:$ROOT_PATH/lib/routines.jar:$ROOT_PATH/lib/commons-codec-1.6.jar:$ROOT_PATH/lib/commons-httpclient-3.0.1.jar:$ROOT_PATH/lib/commons-logging-1.1.jar:$ROOT_PATH/lib/dom4j-1.6.1.jar:$ROOT_PATH/lib/jcifs-1.3.0.jar:$ROOT_PATH/lib/jsch-0.1.51.jar:$ROOT_PATH/lib/log4j-1.2.16.jar:$ROOT_PATH/lib/talendcsv.jar:$ROOT_PATH/ListasNegras-0.1.jar</talend.job.sh.classpath>
     <talend.project.id>0</talend.project.id>
-    <talend.job.date>2015-10-22 183243887</talend.job.date>
+    <talend.job.date>2015-10-23 175145394</talend.job.date>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
     <talend.job.id>_-nvy8HjhEeWNh73uwOWUKg</talend.job.id>
     <talend.job.stat>false</talend.job.stat>

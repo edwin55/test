@@ -395,42 +395,6 @@ public class ListasNegras implements TalendJob {
 		}
 	}
 
-	public void tFileFetch_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		try {
-
-			if (this.execStat) {
-				runStat.updateStatOnConnection("OnComponentError1", 0, "error");
-			}
-
-			errorCode = null;
-			tDie_1Process(globalMap);
-			if (!"failure".equals(status)) {
-				status = "end";
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		tFileFetch_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tWarn_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tWarn_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
 	public void tDie_1_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
@@ -440,89 +404,6 @@ public class ListasNegras implements TalendJob {
 		status = "failure";
 
 		tDie_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tFileExist_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		try {
-
-			if (this.execStat) {
-				runStat.updateStatOnConnection("OnComponentError4", 0, "error");
-			}
-
-			errorCode = null;
-			tDie_3Process(globalMap);
-			if (!"failure".equals(status)) {
-				status = "end";
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		tFileExist_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tWarn_3_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tWarn_3_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tDie_3_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tDie_3_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tFileFetch_2_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		try {
-
-			if (this.execStat) {
-				runStat.updateStatOnConnection("OnComponentError2", 0, "error");
-			}
-
-			errorCode = null;
-			tDie_2Process(globalMap);
-			if (!"failure".equals(status)) {
-				status = "end";
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		tFileFetch_2_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tWarn_2_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tWarn_2_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void tDie_2_error(Exception exception, String errorComponent,
@@ -536,32 +417,7 @@ public class ListasNegras implements TalendJob {
 		tDie_2_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tFileExist_2_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		try {
-
-			if (this.execStat) {
-				runStat.updateStatOnConnection("OnComponentError3", 0, "error");
-			}
-
-			errorCode = null;
-			tDie_4Process(globalMap);
-			if (!"failure".equals(status)) {
-				status = "end";
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		tFileExist_2_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tWarn_4_error(Exception exception, String errorComponent,
+	public void tDie_3_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -569,7 +425,7 @@ public class ListasNegras implements TalendJob {
 
 		status = "failure";
 
-		tWarn_4_onSubJobError(exception, errorComponent, globalMap);
+		tDie_3_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void tDie_4_error(Exception exception, String errorComponent,
@@ -581,6 +437,28 @@ public class ListasNegras implements TalendJob {
 		status = "failure";
 
 		tDie_4_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tDie_5_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tDie_5_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tDie_6_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tDie_6_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void tFTPConnection_1_error(Exception exception,
@@ -644,18 +522,32 @@ public class ListasNegras implements TalendJob {
 		tWarn_5_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tDie_6_error(Exception exception, String errorComponent,
+	public void tFileExist_1_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
-		status = "failure";
+		try {
 
-		tDie_6_onSubJobError(exception, errorComponent, globalMap);
+			if (this.execStat) {
+				runStat.updateStatOnConnection("OnComponentError4", 0, "error");
+			}
+
+			errorCode = null;
+			tDie_3Process(globalMap);
+			if (!"failure".equals(status)) {
+				status = "end";
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		tFileExist_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tDie_5_error(Exception exception, String errorComponent,
+	public void tWarn_3_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -663,7 +555,126 @@ public class ListasNegras implements TalendJob {
 
 		status = "failure";
 
-		tDie_5_onSubJobError(exception, errorComponent, globalMap);
+		tWarn_3_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tFileExist_2_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		try {
+
+			if (this.execStat) {
+				runStat.updateStatOnConnection("OnComponentError3", 0, "error");
+			}
+
+			errorCode = null;
+			tDie_4Process(globalMap);
+			if (!"failure".equals(status)) {
+				status = "end";
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		tFileExist_2_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tWarn_4_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tWarn_4_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tFileFetch_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		try {
+
+			if (this.execStat) {
+				runStat.updateStatOnConnection("OnComponentError1", 0, "error");
+			}
+
+			errorCode = null;
+			tDie_1Process(globalMap);
+			if (!"failure".equals(status)) {
+				status = "end";
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		tFileFetch_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tWarn_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tWarn_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tFileFetch_2_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		try {
+
+			if (this.execStat) {
+				runStat.updateStatOnConnection("OnComponentError2", 0, "error");
+			}
+
+			errorCode = null;
+			tDie_2Process(globalMap);
+			if (!"failure".equals(status)) {
+				status = "end";
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		tFileFetch_2_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tWarn_2_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tWarn_2_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tJava_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tJava_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void tLogCatcher_1_error(Exception exception, String errorComponent,
@@ -721,6 +732,17 @@ public class ListasNegras implements TalendJob {
 		tLogCatcher_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
+	public void tLogRow_2_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tLogRow_2_onSubJobError(exception, errorComponent, globalMap);
+	}
+
 	public void tPrejob_1_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
@@ -732,95 +754,7 @@ public class ListasNegras implements TalendJob {
 		tPrejob_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tJava_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tJava_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tFileFetch_1_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tWarn_1_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
 	public void tDie_1_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tFileExist_1_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tWarn_3_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tDie_3_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tFileFetch_2_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tWarn_2_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -842,18 +776,7 @@ public class ListasNegras implements TalendJob {
 
 	}
 
-	public void tFileExist_2_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tWarn_4_onSubJobError(Exception exception,
+	public void tDie_3_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -865,6 +788,28 @@ public class ListasNegras implements TalendJob {
 	}
 
 	public void tDie_4_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tDie_5_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tDie_6_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -908,7 +853,7 @@ public class ListasNegras implements TalendJob {
 
 	}
 
-	public void tDie_6_onSubJobError(Exception exception,
+	public void tFileExist_1_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -919,7 +864,7 @@ public class ListasNegras implements TalendJob {
 
 	}
 
-	public void tDie_5_onSubJobError(Exception exception,
+	public void tWarn_3_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -930,7 +875,7 @@ public class ListasNegras implements TalendJob {
 
 	}
 
-	public void tLogCatcher_1_onSubJobError(Exception exception,
+	public void tFileExist_2_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -941,7 +886,51 @@ public class ListasNegras implements TalendJob {
 
 	}
 
-	public void tPrejob_1_onSubJobError(Exception exception,
+	public void tWarn_4_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tFileFetch_1_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tWarn_1_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tFileFetch_2_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tWarn_2_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -963,447 +952,37 @@ public class ListasNegras implements TalendJob {
 
 	}
 
-	public void tFileFetch_1Process(
-			final java.util.Map<String, Object> globalMap)
+	public void tLogCatcher_1_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
-		globalMap.put("tFileFetch_1_SUBPROCESS_STATE", 0);
 
-		final boolean execStat = this.execStat;
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
 
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-
-			String currentMethodName = new java.lang.Exception()
-					.getStackTrace()[0].getMethodName();
-			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
-			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
-																					// the
-																					// resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tFileFetch_1 begin ] start
-				 */
-
-				ok_Hash.put("tFileFetch_1", false);
-				start_Hash.put("tFileFetch_1", System.currentTimeMillis());
-
-				currentComponent = "tFileFetch_1";
-
-				int tos_count_tFileFetch_1 = 0;
-
-				/**
-				 * [tFileFetch_1 begin ] stop
-				 */
-
-				/**
-				 * [tFileFetch_1 main ] start
-				 */
-
-				currentComponent = "tFileFetch_1";
-
-				java.io.InputStream retIS_tFileFetch_1 = null;
-
-				class SocketFactory_tFileFetch_1
-						implements
-						org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory {
-
-					private javax.net.ssl.SSLContext sslcontext = null;
-
-					private javax.net.ssl.SSLContext createSSLContext() {
-						javax.net.ssl.SSLContext sslcontext = null;
-
-						try {
-							sslcontext = javax.net.ssl.SSLContext
-									.getInstance("SSL");
-							sslcontext
-									.init(null,
-											new javax.net.ssl.TrustManager[] { new TrustAnyTrustManager() },
-											new java.security.SecureRandom());
-						} catch (java.security.NoSuchAlgorithmException e) {
-
-							e.printStackTrace();
-						} catch (java.security.KeyManagementException e) {
-
-							e.printStackTrace();
-						}
-						return sslcontext;
-					}
-
-					private javax.net.ssl.SSLContext getSSLContext() {
-
-						if (this.sslcontext == null) {
-							this.sslcontext = createSSLContext();
-						}
-						return this.sslcontext;
-					}
-
-					public java.net.Socket createSocket(java.net.Socket socket,
-							String host, int port, boolean autoClose)
-							throws java.io.IOException,
-							java.net.UnknownHostException {
-						return getSSLContext().getSocketFactory().createSocket(
-								socket, host, port, autoClose);
-					}
-
-					public java.net.Socket createSocket(String host, int port)
-							throws java.io.IOException,
-							java.net.UnknownHostException {
-						return getSSLContext().getSocketFactory().createSocket(
-								host, port);
-					}
-
-					public java.net.Socket createSocket(String host, int port,
-							java.net.InetAddress clientHost, int clientPort)
-							throws java.io.IOException,
-							java.net.UnknownHostException {
-						return getSSLContext().getSocketFactory().createSocket(
-								host, port, clientHost, clientPort);
-					}
-
-					public java.net.Socket createSocket(
-							String host,
-							int port,
-							java.net.InetAddress localAddress,
-							int localPort,
-							org.apache.commons.httpclient.params.HttpConnectionParams params)
-							throws java.io.IOException,
-							java.net.UnknownHostException,
-							org.apache.commons.httpclient.ConnectTimeoutException {
-
-						if (params == null) {
-							throw new IllegalArgumentException(
-									"Parameters may not be null");
-						}
-						int timeout = params.getConnectionTimeout();
-						javax.net.SocketFactory socketfactory = getSSLContext()
-								.getSocketFactory();
-
-						if (timeout == 0) {
-							return socketfactory.createSocket(host, port,
-									localAddress, localPort);
-						} else {
-							java.net.Socket socket = socketfactory
-									.createSocket();
-							java.net.SocketAddress localaddr = new java.net.InetSocketAddress(
-									localAddress, localPort);
-							java.net.SocketAddress remoteaddr = new java.net.InetSocketAddress(
-									host, port);
-							socket.bind(localaddr);
-							socket.connect(remoteaddr, timeout);
-							return socket;
-						}
-					}
-
-					class TrustAnyTrustManager implements
-							javax.net.ssl.X509TrustManager {
-						public void checkClientTrusted(
-								java.security.cert.X509Certificate[] chain,
-								String authType)
-								throws java.security.cert.CertificateException {
-						}
-
-						public void checkServerTrusted(
-								java.security.cert.X509Certificate[] chain,
-								String authType)
-								throws java.security.cert.CertificateException {
-						}
-
-						public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-							return new java.security.cert.X509Certificate[] {};
-						}
-					}
-				}
-
-				if ((context.urlONU + context.archivoONU).toLowerCase()
-						.startsWith("https://")) {
-					org.apache.commons.httpclient.protocol.Protocol myhttps = new org.apache.commons.httpclient.protocol.Protocol(
-							"https", new SocketFactory_tFileFetch_1(), 443);
-					org.apache.commons.httpclient.protocol.Protocol
-							.registerProtocol("https", myhttps);
-				}
-
-				org.apache.commons.httpclient.HttpClient client_tFileFetch_1 = new org.apache.commons.httpclient.HttpClient();
-
-				client_tFileFetch_1.getHttpConnectionManager().getParams()
-						.setConnectionTimeout(1000);
-
-				client_tFileFetch_1
-						.getParams()
-						.setCookiePolicy(
-								org.apache.commons.httpclient.cookie.CookiePolicy.DEFAULT);
-
-				org.apache.commons.httpclient.methods.GetMethod method_tFileFetch_1 = new org.apache.commons.httpclient.methods.GetMethod(
-						context.urlONU + context.archivoONU);
-
-				boolean isContinue_tFileFetch_1 = true;
-				int status_tFileFetch_1;
-				String finalURL_tFileFetch_1 = context.urlONU
-						+ context.archivoONU;
-
-				try { // B_01
-
-					status_tFileFetch_1 = client_tFileFetch_1
-							.executeMethod(method_tFileFetch_1);
-
-					if (status_tFileFetch_1 != org.apache.commons.httpclient.HttpStatus.SC_OK) {
-						throw new java.lang.Exception("Method failed: "
-								+ method_tFileFetch_1.getStatusLine());
-					}
-
-				} catch (java.lang.Exception e) {
-
-					throw (e);
-
-				}
-
-				if (isContinue_tFileFetch_1) {
-
-					java.io.InputStream in_tFileFetch_1 = method_tFileFetch_1
-							.getResponseBodyAsStream();
-					String sDir_tFileFetch_1 = (context.ruta).trim();
-					String fileName_tFileFetch_1 = ("").trim();
-					// open directory
-					java.net.URL url_tFileFetch_1 = new java.net.URL(
-							finalURL_tFileFetch_1);
-					String sURIPath_tFileFetch_1 = "";
-					int iLastSlashIndex_tFileFetch_1 = 0;
-					sURIPath_tFileFetch_1 = url_tFileFetch_1.getFile();
-					iLastSlashIndex_tFileFetch_1 = sURIPath_tFileFetch_1
-							.lastIndexOf("/");
-
-					// if not input file name, get the name from URI
-					if ("".equals(fileName_tFileFetch_1)) {
-						if (iLastSlashIndex_tFileFetch_1 > 0
-								&& (!sURIPath_tFileFetch_1.endsWith("/"))) {
-							fileName_tFileFetch_1 = sURIPath_tFileFetch_1
-									.substring(iLastSlashIndex_tFileFetch_1 + 1);
-						} else {
-							fileName_tFileFetch_1 = "defaultfilename.txt";
-						}
-					}
-					java.io.File dir_tFileFetch_1 = new java.io.File(
-							sDir_tFileFetch_1);
-
-					// pretreatment
-					try {
-						java.io.File test_file_tFileFetch_1 = new java.io.File(
-								dir_tFileFetch_1, fileName_tFileFetch_1);
-						test_file_tFileFetch_1.getParentFile().mkdirs();
-
-						if (test_file_tFileFetch_1.createNewFile()) {
-							test_file_tFileFetch_1.delete();
-						}
-					} catch (java.lang.Exception e) {
-
-						fileName_tFileFetch_1 = "defaultfilename.txt";
-					}
-					java.io.File file_tFileFetch_1 = new java.io.File(
-							dir_tFileFetch_1, fileName_tFileFetch_1);
-					file_tFileFetch_1.getParentFile().mkdirs();
-					java.io.FileOutputStream out_tFileFetch_1 = new java.io.FileOutputStream(
-							file_tFileFetch_1);
-					byte[] buffer_tFileFetch_1 = new byte[1024];
-					int count_tFileFetch_1 = 0;
-
-					while ((count_tFileFetch_1 = in_tFileFetch_1
-							.read(buffer_tFileFetch_1)) > 0) {
-						out_tFileFetch_1.write(buffer_tFileFetch_1, 0,
-								count_tFileFetch_1);
-					}
-					// close opened object
-					in_tFileFetch_1.close();
-					out_tFileFetch_1.close();
-
-					method_tFileFetch_1.releaseConnection();
-
-				} // B_01
-				globalMap.put("tFileFetch_1_INPUT_STREAM", retIS_tFileFetch_1);
-
-				tos_count_tFileFetch_1++;
-
-				/**
-				 * [tFileFetch_1 main ] stop
-				 */
-
-				/**
-				 * [tFileFetch_1 end ] start
-				 */
-
-				currentComponent = "tFileFetch_1";
-
-				ok_Hash.put("tFileFetch_1", true);
-				end_Hash.put("tFileFetch_1", System.currentTimeMillis());
-
-				if (execStat) {
-					runStat.updateStatOnConnection("OnComponentOk1", 0, "ok");
-				}
-				tWarn_1Process(globalMap);
-
-				/**
-				 * [tFileFetch_1 end ] stop
-				 */
-			}// end the resume
-
-			if (resumeEntryMethodName == null || globalResumeTicket) {
-				resumeUtil
-						.addLog("CHECKPOINT",
-								"CONNECTION:SUBJOB_OK:tFileFetch_1:OnSubjobOk",
-								"", Thread.currentThread().getId() + "", "",
-								"", "", "", "");
-			}
-
-			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk1", 0, "ok");
-			}
-
-			tFileExist_1Process(globalMap);
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tFileFetch_1 finally ] start
-				 */
-
-				currentComponent = "tFileFetch_1";
-
-				/**
-				 * [tFileFetch_1 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tFileFetch_1_SUBPROCESS_STATE", 1);
 	}
 
-	public void tWarn_1Process(final java.util.Map<String, Object> globalMap)
+	public void tLogRow_2_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
-		globalMap.put("tWarn_1_SUBPROCESS_STATE", 0);
 
-		final boolean execStat = this.execStat;
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
 
-		String iterateId = "";
+	}
 
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+	public void tPrejob_1_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
 
-		try {
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
 
-			String currentMethodName = new java.lang.Exception()
-					.getStackTrace()[0].getMethodName();
-			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
-			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
-																					// the
-																					// resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tWarn_1 begin ] start
-				 */
-
-				ok_Hash.put("tWarn_1", false);
-				start_Hash.put("tWarn_1", System.currentTimeMillis());
-
-				currentComponent = "tWarn_1";
-
-				int tos_count_tWarn_1 = 0;
-
-				/**
-				 * [tWarn_1 begin ] stop
-				 */
-
-				/**
-				 * [tWarn_1 main ] start
-				 */
-
-				currentComponent = "tWarn_1";
-
-				resumeUtil.addLog("USER_DEF_LOG", "NODE:tWarn_1", "", Thread
-						.currentThread().getId() + "", "WARN", "",
-						"Se conecta a la url de la ONU", "", "");
-				tLogCatcher_1.addMessage("tWarn", "tWarn_1", 4,
-						"Se conecta a la url de la ONU", 42);
-				tLogCatcher_1Process(globalMap);
-				globalMap.put("tWarn_1_WARN_MESSAGES",
-						"Se conecta a la url de la ONU");
-				globalMap.put("tWarn_1_WARN_PRIORITY", 4);
-				globalMap.put("tWarn_1_WARN_CODE", 42);
-
-				tos_count_tWarn_1++;
-
-				/**
-				 * [tWarn_1 main ] stop
-				 */
-
-				/**
-				 * [tWarn_1 end ] start
-				 */
-
-				currentComponent = "tWarn_1";
-
-				ok_Hash.put("tWarn_1", true);
-				end_Hash.put("tWarn_1", System.currentTimeMillis());
-
-				/**
-				 * [tWarn_1 end ] stop
-				 */
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tWarn_1 finally ] start
-				 */
-
-				currentComponent = "tWarn_1";
-
-				/**
-				 * [tWarn_1 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tWarn_1_SUBPROCESS_STATE", 1);
 	}
 
 	public void tDie_1Process(final java.util.Map<String, Object> globalMap)
@@ -1537,673 +1116,6 @@ public class ListasNegras implements TalendJob {
 		globalMap.put("tDie_1_SUBPROCESS_STATE", 1);
 	}
 
-	public void tFileExist_1Process(
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tFileExist_1_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-
-			String currentMethodName = new java.lang.Exception()
-					.getStackTrace()[0].getMethodName();
-			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
-			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
-																					// the
-																					// resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tFileExist_1 begin ] start
-				 */
-
-				ok_Hash.put("tFileExist_1", false);
-				start_Hash.put("tFileExist_1", System.currentTimeMillis());
-
-				currentComponent = "tFileExist_1";
-
-				int tos_count_tFileExist_1 = 0;
-
-				/**
-				 * [tFileExist_1 begin ] stop
-				 */
-
-				/**
-				 * [tFileExist_1 main ] start
-				 */
-
-				currentComponent = "tFileExist_1";
-
-				java.io.File file_tFileExist_1 = new java.io.File(context.ruta
-						+ context.archivoONU);
-				if (!file_tFileExist_1.exists()) {
-					globalMap.put("tFileExist_1_EXISTS", false);
-				} else {
-					globalMap.put("tFileExist_1_EXISTS", true);
-				}
-
-				globalMap.put("tFileExist_1_FILENAME", context.ruta
-						+ context.archivoONU);
-
-				tos_count_tFileExist_1++;
-
-				/**
-				 * [tFileExist_1 main ] stop
-				 */
-
-				/**
-				 * [tFileExist_1 end ] start
-				 */
-
-				currentComponent = "tFileExist_1";
-
-				ok_Hash.put("tFileExist_1", true);
-				end_Hash.put("tFileExist_1", System.currentTimeMillis());
-
-				if (execStat) {
-					runStat.updateStatOnConnection("OnComponentOk3", 0, "ok");
-				}
-				tWarn_3Process(globalMap);
-
-				/**
-				 * [tFileExist_1 end ] stop
-				 */
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tFileExist_1 finally ] start
-				 */
-
-				currentComponent = "tFileExist_1";
-
-				/**
-				 * [tFileExist_1 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tFileExist_1_SUBPROCESS_STATE", 1);
-	}
-
-	public void tWarn_3Process(final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tWarn_3_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-
-			String currentMethodName = new java.lang.Exception()
-					.getStackTrace()[0].getMethodName();
-			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
-			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
-																					// the
-																					// resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tWarn_3 begin ] start
-				 */
-
-				ok_Hash.put("tWarn_3", false);
-				start_Hash.put("tWarn_3", System.currentTimeMillis());
-
-				currentComponent = "tWarn_3";
-
-				int tos_count_tWarn_3 = 0;
-
-				/**
-				 * [tWarn_3 begin ] stop
-				 */
-
-				/**
-				 * [tWarn_3 main ] start
-				 */
-
-				currentComponent = "tWarn_3";
-
-				resumeUtil.addLog("USER_DEF_LOG", "NODE:tWarn_3", "", Thread
-						.currentThread().getId() + "", "WARN", "",
-						"Se descargó el archivo " + context.archivoONU, "", "");
-				tLogCatcher_1.addMessage("tWarn", "tWarn_3", 4,
-						"Se descargó el archivo " + context.archivoONU, 42);
-				tLogCatcher_1Process(globalMap);
-				globalMap.put("tWarn_3_WARN_MESSAGES",
-						"Se descargó el archivo " + context.archivoONU);
-				globalMap.put("tWarn_3_WARN_PRIORITY", 4);
-				globalMap.put("tWarn_3_WARN_CODE", 42);
-
-				tos_count_tWarn_3++;
-
-				/**
-				 * [tWarn_3 main ] stop
-				 */
-
-				/**
-				 * [tWarn_3 end ] start
-				 */
-
-				currentComponent = "tWarn_3";
-
-				ok_Hash.put("tWarn_3", true);
-				end_Hash.put("tWarn_3", System.currentTimeMillis());
-
-				/**
-				 * [tWarn_3 end ] stop
-				 */
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tWarn_3 finally ] start
-				 */
-
-				currentComponent = "tWarn_3";
-
-				/**
-				 * [tWarn_3 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tWarn_3_SUBPROCESS_STATE", 1);
-	}
-
-	public void tDie_3Process(final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tDie_3_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-
-			String currentMethodName = new java.lang.Exception()
-					.getStackTrace()[0].getMethodName();
-			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
-			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
-																					// the
-																					// resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tDie_3 begin ] start
-				 */
-
-				ok_Hash.put("tDie_3", false);
-				start_Hash.put("tDie_3", System.currentTimeMillis());
-
-				currentComponent = "tDie_3";
-
-				int tos_count_tDie_3 = 0;
-
-				/**
-				 * [tDie_3 begin ] stop
-				 */
-
-				/**
-				 * [tDie_3 main ] start
-				 */
-
-				currentComponent = "tDie_3";
-
-				tLogCatcher_1.addMessage("tDie", "tDie_3", 5,
-						"Error: descarga de la lista de la ONU "
-								+ context.archivoONU, 4);
-				tLogCatcher_1Process(globalMap);
-
-				globalMap.put("tDie_3_DIE_PRIORITY", 5);
-				System.err.println("Error: descarga de la lista de la ONU "
-						+ context.archivoONU);
-
-				globalMap.put("tDie_3_DIE_MESSAGE",
-						"Error: descarga de la lista de la ONU "
-								+ context.archivoONU);
-				globalMap.put("tDie_3_DIE_MESSAGES",
-						"Error: descarga de la lista de la ONU "
-								+ context.archivoONU);
-				currentComponent = "tDie_3";
-				status = "failure";
-				errorCode = new Integer(4);
-				globalMap.put("tDie_3_DIE_CODE", errorCode);
-
-				if (true) {
-					throw new TDieException();
-				}
-
-				tos_count_tDie_3++;
-
-				/**
-				 * [tDie_3 main ] stop
-				 */
-
-				/**
-				 * [tDie_3 end ] start
-				 */
-
-				currentComponent = "tDie_3";
-
-				ok_Hash.put("tDie_3", true);
-				end_Hash.put("tDie_3", System.currentTimeMillis());
-
-				/**
-				 * [tDie_3 end ] stop
-				 */
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tDie_3 finally ] start
-				 */
-
-				currentComponent = "tDie_3";
-
-				/**
-				 * [tDie_3 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tDie_3_SUBPROCESS_STATE", 1);
-	}
-
-	public void tFileFetch_2Process(
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tFileFetch_2_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-
-			String currentMethodName = new java.lang.Exception()
-					.getStackTrace()[0].getMethodName();
-			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
-			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
-																					// the
-																					// resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tFileFetch_2 begin ] start
-				 */
-
-				ok_Hash.put("tFileFetch_2", false);
-				start_Hash.put("tFileFetch_2", System.currentTimeMillis());
-
-				currentComponent = "tFileFetch_2";
-
-				int tos_count_tFileFetch_2 = 0;
-
-				/**
-				 * [tFileFetch_2 begin ] stop
-				 */
-
-				/**
-				 * [tFileFetch_2 main ] start
-				 */
-
-				currentComponent = "tFileFetch_2";
-
-				java.io.InputStream retIS_tFileFetch_2 = null;
-
-				org.apache.commons.httpclient.HttpClient client_tFileFetch_2 = new org.apache.commons.httpclient.HttpClient();
-
-				client_tFileFetch_2.getHttpConnectionManager().getParams()
-						.setConnectionTimeout(1000);
-
-				client_tFileFetch_2
-						.getParams()
-						.setCookiePolicy(
-								org.apache.commons.httpclient.cookie.CookiePolicy.DEFAULT);
-
-				org.apache.commons.httpclient.methods.GetMethod method_tFileFetch_2 = new org.apache.commons.httpclient.methods.GetMethod(
-						context.urlOFAC + context.archivoOFAC);
-
-				boolean isContinue_tFileFetch_2 = true;
-				int status_tFileFetch_2;
-				String finalURL_tFileFetch_2 = context.urlOFAC
-						+ context.archivoOFAC;
-
-				try { // B_01
-
-					status_tFileFetch_2 = client_tFileFetch_2
-							.executeMethod(method_tFileFetch_2);
-
-					if (status_tFileFetch_2 != org.apache.commons.httpclient.HttpStatus.SC_OK) {
-						throw new java.lang.Exception("Method failed: "
-								+ method_tFileFetch_2.getStatusLine());
-					}
-
-				} catch (java.lang.Exception e) {
-
-					throw (e);
-
-				}
-
-				if (isContinue_tFileFetch_2) {
-
-					java.io.InputStream in_tFileFetch_2 = method_tFileFetch_2
-							.getResponseBodyAsStream();
-					String sDir_tFileFetch_2 = (context.ruta).trim();
-					String fileName_tFileFetch_2 = ("").trim();
-					// open directory
-					java.net.URL url_tFileFetch_2 = new java.net.URL(
-							finalURL_tFileFetch_2);
-					String sURIPath_tFileFetch_2 = "";
-					int iLastSlashIndex_tFileFetch_2 = 0;
-					sURIPath_tFileFetch_2 = url_tFileFetch_2.getFile();
-					iLastSlashIndex_tFileFetch_2 = sURIPath_tFileFetch_2
-							.lastIndexOf("/");
-
-					// if not input file name, get the name from URI
-					if ("".equals(fileName_tFileFetch_2)) {
-						if (iLastSlashIndex_tFileFetch_2 > 0
-								&& (!sURIPath_tFileFetch_2.endsWith("/"))) {
-							fileName_tFileFetch_2 = sURIPath_tFileFetch_2
-									.substring(iLastSlashIndex_tFileFetch_2 + 1);
-						} else {
-							fileName_tFileFetch_2 = "defaultfilename.txt";
-						}
-					}
-					java.io.File dir_tFileFetch_2 = new java.io.File(
-							sDir_tFileFetch_2);
-
-					// pretreatment
-					try {
-						java.io.File test_file_tFileFetch_2 = new java.io.File(
-								dir_tFileFetch_2, fileName_tFileFetch_2);
-						test_file_tFileFetch_2.getParentFile().mkdirs();
-
-						if (test_file_tFileFetch_2.createNewFile()) {
-							test_file_tFileFetch_2.delete();
-						}
-					} catch (java.lang.Exception e) {
-
-						fileName_tFileFetch_2 = "defaultfilename.txt";
-					}
-					java.io.File file_tFileFetch_2 = new java.io.File(
-							dir_tFileFetch_2, fileName_tFileFetch_2);
-					file_tFileFetch_2.getParentFile().mkdirs();
-					java.io.FileOutputStream out_tFileFetch_2 = new java.io.FileOutputStream(
-							file_tFileFetch_2);
-					byte[] buffer_tFileFetch_2 = new byte[1024];
-					int count_tFileFetch_2 = 0;
-
-					while ((count_tFileFetch_2 = in_tFileFetch_2
-							.read(buffer_tFileFetch_2)) > 0) {
-						out_tFileFetch_2.write(buffer_tFileFetch_2, 0,
-								count_tFileFetch_2);
-					}
-					// close opened object
-					in_tFileFetch_2.close();
-					out_tFileFetch_2.close();
-
-					method_tFileFetch_2.releaseConnection();
-
-				} // B_01
-				globalMap.put("tFileFetch_2_INPUT_STREAM", retIS_tFileFetch_2);
-
-				tos_count_tFileFetch_2++;
-
-				/**
-				 * [tFileFetch_2 main ] stop
-				 */
-
-				/**
-				 * [tFileFetch_2 end ] start
-				 */
-
-				currentComponent = "tFileFetch_2";
-
-				ok_Hash.put("tFileFetch_2", true);
-				end_Hash.put("tFileFetch_2", System.currentTimeMillis());
-
-				if (execStat) {
-					runStat.updateStatOnConnection("OnComponentOk2", 0, "ok");
-				}
-				tWarn_2Process(globalMap);
-
-				/**
-				 * [tFileFetch_2 end ] stop
-				 */
-			}// end the resume
-
-			if (resumeEntryMethodName == null || globalResumeTicket) {
-				resumeUtil
-						.addLog("CHECKPOINT",
-								"CONNECTION:SUBJOB_OK:tFileFetch_2:OnSubjobOk",
-								"", Thread.currentThread().getId() + "", "",
-								"", "", "", "");
-			}
-
-			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk2", 0, "ok");
-			}
-
-			tFileExist_2Process(globalMap);
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tFileFetch_2 finally ] start
-				 */
-
-				currentComponent = "tFileFetch_2";
-
-				/**
-				 * [tFileFetch_2 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tFileFetch_2_SUBPROCESS_STATE", 1);
-	}
-
-	public void tWarn_2Process(final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tWarn_2_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-
-			String currentMethodName = new java.lang.Exception()
-					.getStackTrace()[0].getMethodName();
-			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
-			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
-																					// the
-																					// resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tWarn_2 begin ] start
-				 */
-
-				ok_Hash.put("tWarn_2", false);
-				start_Hash.put("tWarn_2", System.currentTimeMillis());
-
-				currentComponent = "tWarn_2";
-
-				int tos_count_tWarn_2 = 0;
-
-				/**
-				 * [tWarn_2 begin ] stop
-				 */
-
-				/**
-				 * [tWarn_2 main ] start
-				 */
-
-				currentComponent = "tWarn_2";
-
-				resumeUtil.addLog("USER_DEF_LOG", "NODE:tWarn_2", "", Thread
-						.currentThread().getId() + "", "WARN", "",
-						"Se conecta a la url de la OFAC", "", "");
-				tLogCatcher_1.addMessage("tWarn", "tWarn_2", 4,
-						"Se conecta a la url de la OFAC", 42);
-				tLogCatcher_1Process(globalMap);
-				globalMap.put("tWarn_2_WARN_MESSAGES",
-						"Se conecta a la url de la OFAC");
-				globalMap.put("tWarn_2_WARN_PRIORITY", 4);
-				globalMap.put("tWarn_2_WARN_CODE", 42);
-
-				tos_count_tWarn_2++;
-
-				/**
-				 * [tWarn_2 main ] stop
-				 */
-
-				/**
-				 * [tWarn_2 end ] start
-				 */
-
-				currentComponent = "tWarn_2";
-
-				ok_Hash.put("tWarn_2", true);
-				end_Hash.put("tWarn_2", System.currentTimeMillis());
-
-				/**
-				 * [tWarn_2 end ] stop
-				 */
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tWarn_2 finally ] start
-				 */
-
-				currentComponent = "tWarn_2";
-
-				/**
-				 * [tWarn_2 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tWarn_2_SUBPROCESS_STATE", 1);
-	}
-
 	public void tDie_2Process(final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 		globalMap.put("tDie_2_SUBPROCESS_STATE", 0);
@@ -2335,10 +1247,9 @@ public class ListasNegras implements TalendJob {
 		globalMap.put("tDie_2_SUBPROCESS_STATE", 1);
 	}
 
-	public void tFileExist_2Process(
-			final java.util.Map<String, Object> globalMap)
+	public void tDie_3Process(final java.util.Map<String, Object> globalMap)
 			throws TalendException {
-		globalMap.put("tFileExist_2_SUBPROCESS_STATE", 0);
+		globalMap.put("tDie_3_SUBPROCESS_STATE", 0);
 
 		final boolean execStat = this.execStat;
 
@@ -2358,177 +1269,67 @@ public class ListasNegras implements TalendJob {
 				globalResumeTicket = true;
 
 				/**
-				 * [tFileExist_2 begin ] start
+				 * [tDie_3 begin ] start
 				 */
 
-				ok_Hash.put("tFileExist_2", false);
-				start_Hash.put("tFileExist_2", System.currentTimeMillis());
+				ok_Hash.put("tDie_3", false);
+				start_Hash.put("tDie_3", System.currentTimeMillis());
 
-				currentComponent = "tFileExist_2";
+				currentComponent = "tDie_3";
 
-				int tos_count_tFileExist_2 = 0;
-
-				/**
-				 * [tFileExist_2 begin ] stop
-				 */
+				int tos_count_tDie_3 = 0;
 
 				/**
-				 * [tFileExist_2 main ] start
-				 */
-
-				currentComponent = "tFileExist_2";
-
-				java.io.File file_tFileExist_2 = new java.io.File(context.ruta
-						+ context.archivoOFAC);
-				if (!file_tFileExist_2.exists()) {
-					globalMap.put("tFileExist_2_EXISTS", false);
-				} else {
-					globalMap.put("tFileExist_2_EXISTS", true);
-				}
-
-				globalMap.put("tFileExist_2_FILENAME", context.ruta
-						+ context.archivoOFAC);
-
-				tos_count_tFileExist_2++;
-
-				/**
-				 * [tFileExist_2 main ] stop
+				 * [tDie_3 begin ] stop
 				 */
 
 				/**
-				 * [tFileExist_2 end ] start
+				 * [tDie_3 main ] start
 				 */
 
-				currentComponent = "tFileExist_2";
+				currentComponent = "tDie_3";
 
-				ok_Hash.put("tFileExist_2", true);
-				end_Hash.put("tFileExist_2", System.currentTimeMillis());
-
-				if (execStat) {
-					runStat.updateStatOnConnection("OnComponentOk4", 0, "ok");
-				}
-				tWarn_4Process(globalMap);
-				if (execStat) {
-					runStat.updateStatOnConnection("OnComponentOk7", 0, "ok");
-				}
-				tFTPConnection_1Process(globalMap);
-
-				/**
-				 * [tFileExist_2 end ] stop
-				 */
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tFileExist_2 finally ] start
-				 */
-
-				currentComponent = "tFileExist_2";
-
-				/**
-				 * [tFileExist_2 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tFileExist_2_SUBPROCESS_STATE", 1);
-	}
-
-	public void tWarn_4Process(final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tWarn_4_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-
-			String currentMethodName = new java.lang.Exception()
-					.getStackTrace()[0].getMethodName();
-			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
-			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
-																					// the
-																					// resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tWarn_4 begin ] start
-				 */
-
-				ok_Hash.put("tWarn_4", false);
-				start_Hash.put("tWarn_4", System.currentTimeMillis());
-
-				currentComponent = "tWarn_4";
-
-				int tos_count_tWarn_4 = 0;
-
-				/**
-				 * [tWarn_4 begin ] stop
-				 */
-
-				/**
-				 * [tWarn_4 main ] start
-				 */
-
-				currentComponent = "tWarn_4";
-
-				resumeUtil
-						.addLog("USER_DEF_LOG",
-								"NODE:tWarn_4",
-								"",
-								Thread.currentThread().getId() + "",
-								"WARN",
-								"",
-								"Se descargó el archivo " + context.archivoOFAC,
-								"", "");
-				tLogCatcher_1.addMessage("tWarn", "tWarn_4", 4,
-						"Se descargó el archivo " + context.archivoOFAC, 42);
+				tLogCatcher_1.addMessage("tDie", "tDie_3", 5,
+						"Error: descarga de la lista de la ONU "
+								+ context.archivoONU, 4);
 				tLogCatcher_1Process(globalMap);
-				globalMap.put("tWarn_4_WARN_MESSAGES",
-						"Se descargó el archivo " + context.archivoOFAC);
-				globalMap.put("tWarn_4_WARN_PRIORITY", 4);
-				globalMap.put("tWarn_4_WARN_CODE", 42);
 
-				tos_count_tWarn_4++;
+				globalMap.put("tDie_3_DIE_PRIORITY", 5);
+				System.err.println("Error: descarga de la lista de la ONU "
+						+ context.archivoONU);
+
+				globalMap.put("tDie_3_DIE_MESSAGE",
+						"Error: descarga de la lista de la ONU "
+								+ context.archivoONU);
+				globalMap.put("tDie_3_DIE_MESSAGES",
+						"Error: descarga de la lista de la ONU "
+								+ context.archivoONU);
+				currentComponent = "tDie_3";
+				status = "failure";
+				errorCode = new Integer(4);
+				globalMap.put("tDie_3_DIE_CODE", errorCode);
+
+				if (true) {
+					throw new TDieException();
+				}
+
+				tos_count_tDie_3++;
 
 				/**
-				 * [tWarn_4 main ] stop
+				 * [tDie_3 main ] stop
 				 */
 
 				/**
-				 * [tWarn_4 end ] start
+				 * [tDie_3 end ] start
 				 */
 
-				currentComponent = "tWarn_4";
+				currentComponent = "tDie_3";
 
-				ok_Hash.put("tWarn_4", true);
-				end_Hash.put("tWarn_4", System.currentTimeMillis());
+				ok_Hash.put("tDie_3", true);
+				end_Hash.put("tDie_3", System.currentTimeMillis());
 
 				/**
-				 * [tWarn_4 end ] stop
+				 * [tDie_3 end ] stop
 				 */
 			}// end the resume
 
@@ -2548,13 +1349,13 @@ public class ListasNegras implements TalendJob {
 			try {
 
 				/**
-				 * [tWarn_4 finally ] start
+				 * [tDie_3 finally ] start
 				 */
 
-				currentComponent = "tWarn_4";
+				currentComponent = "tDie_3";
 
 				/**
-				 * [tWarn_4 finally ] stop
+				 * [tDie_3 finally ] stop
 				 */
 			} catch (java.lang.Exception e) {
 				// ignore
@@ -2564,7 +1365,7 @@ public class ListasNegras implements TalendJob {
 			resourceMap = null;
 		}
 
-		globalMap.put("tWarn_4_SUBPROCESS_STATE", 1);
+		globalMap.put("tDie_3_SUBPROCESS_STATE", 1);
 	}
 
 	public void tDie_4Process(final java.util.Map<String, Object> globalMap)
@@ -2686,6 +1487,275 @@ public class ListasNegras implements TalendJob {
 		}
 
 		globalMap.put("tDie_4_SUBPROCESS_STATE", 1);
+	}
+
+	public void tDie_5Process(final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tDie_5_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+
+			String currentMethodName = new java.lang.Exception()
+					.getStackTrace()[0].getMethodName();
+			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
+			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
+																					// the
+																					// resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tDie_5 begin ] start
+				 */
+
+				ok_Hash.put("tDie_5", false);
+				start_Hash.put("tDie_5", System.currentTimeMillis());
+
+				currentComponent = "tDie_5";
+
+				int tos_count_tDie_5 = 0;
+
+				/**
+				 * [tDie_5 begin ] stop
+				 */
+
+				/**
+				 * [tDie_5 main ] start
+				 */
+
+				currentComponent = "tDie_5";
+
+				tLogCatcher_1
+						.addMessage(
+								"tDie",
+								"tDie_5",
+								5,
+								"Error: Conectar al servidor "
+										+ context.servidorSftp
+										+ " "
+										+ ((String) globalMap
+												.get("tFTPConnection_1_ERROR_MESSAGE")),
+								4);
+				tLogCatcher_1Process(globalMap);
+
+				globalMap.put("tDie_5_DIE_PRIORITY", 5);
+				System.err.println("Error: Conectar al servidor "
+						+ context.servidorSftp
+						+ " "
+						+ ((String) globalMap
+								.get("tFTPConnection_1_ERROR_MESSAGE")));
+
+				globalMap
+						.put("tDie_5_DIE_MESSAGE",
+								"Error: Conectar al servidor "
+										+ context.servidorSftp
+										+ " "
+										+ ((String) globalMap
+												.get("tFTPConnection_1_ERROR_MESSAGE")));
+				globalMap
+						.put("tDie_5_DIE_MESSAGES",
+								"Error: Conectar al servidor "
+										+ context.servidorSftp
+										+ " "
+										+ ((String) globalMap
+												.get("tFTPConnection_1_ERROR_MESSAGE")));
+				currentComponent = "tDie_5";
+				status = "failure";
+				errorCode = new Integer(4);
+				globalMap.put("tDie_5_DIE_CODE", errorCode);
+
+				if (true) {
+					throw new TDieException();
+				}
+
+				tos_count_tDie_5++;
+
+				/**
+				 * [tDie_5 main ] stop
+				 */
+
+				/**
+				 * [tDie_5 end ] start
+				 */
+
+				currentComponent = "tDie_5";
+
+				ok_Hash.put("tDie_5", true);
+				end_Hash.put("tDie_5", System.currentTimeMillis());
+
+				/**
+				 * [tDie_5 end ] stop
+				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tDie_5 finally ] start
+				 */
+
+				currentComponent = "tDie_5";
+
+				/**
+				 * [tDie_5 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tDie_5_SUBPROCESS_STATE", 1);
+	}
+
+	public void tDie_6Process(final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tDie_6_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+
+			String currentMethodName = new java.lang.Exception()
+					.getStackTrace()[0].getMethodName();
+			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
+			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
+																					// the
+																					// resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tDie_6 begin ] start
+				 */
+
+				ok_Hash.put("tDie_6", false);
+				start_Hash.put("tDie_6", System.currentTimeMillis());
+
+				currentComponent = "tDie_6";
+
+				int tos_count_tDie_6 = 0;
+
+				/**
+				 * [tDie_6 begin ] stop
+				 */
+
+				/**
+				 * [tDie_6 main ] start
+				 */
+
+				currentComponent = "tDie_6";
+
+				tLogCatcher_1.addMessage(
+						"tDie",
+						"tDie_6",
+						5,
+						"Error: Enviar archivos al servidor SFTP "
+								+ ((String) globalMap
+										.get("tFTPPut_1_ERROR_MESSAGE")), 4);
+				tLogCatcher_1Process(globalMap);
+
+				globalMap.put("tDie_6_DIE_PRIORITY", 5);
+				System.err.println("Error: Enviar archivos al servidor SFTP "
+						+ ((String) globalMap.get("tFTPPut_1_ERROR_MESSAGE")));
+
+				globalMap.put(
+						"tDie_6_DIE_MESSAGE",
+						"Error: Enviar archivos al servidor SFTP "
+								+ ((String) globalMap
+										.get("tFTPPut_1_ERROR_MESSAGE")));
+				globalMap.put(
+						"tDie_6_DIE_MESSAGES",
+						"Error: Enviar archivos al servidor SFTP "
+								+ ((String) globalMap
+										.get("tFTPPut_1_ERROR_MESSAGE")));
+				currentComponent = "tDie_6";
+				status = "failure";
+				errorCode = new Integer(4);
+				globalMap.put("tDie_6_DIE_CODE", errorCode);
+
+				if (true) {
+					throw new TDieException();
+				}
+
+				tos_count_tDie_6++;
+
+				/**
+				 * [tDie_6 main ] stop
+				 */
+
+				/**
+				 * [tDie_6 end ] start
+				 */
+
+				currentComponent = "tDie_6";
+
+				ok_Hash.put("tDie_6", true);
+				end_Hash.put("tDie_6", System.currentTimeMillis());
+
+				/**
+				 * [tDie_6 end ] stop
+				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tDie_6 finally ] start
+				 */
+
+				currentComponent = "tDie_6";
+
+				/**
+				 * [tDie_6 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tDie_6_SUBPROCESS_STATE", 1);
 	}
 
 	public void tFTPConnection_1Process(
@@ -3306,9 +2376,10 @@ public class ListasNegras implements TalendJob {
 		globalMap.put("tWarn_5_SUBPROCESS_STATE", 1);
 	}
 
-	public void tDie_6Process(final java.util.Map<String, Object> globalMap)
+	public void tFileExist_1Process(
+			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
-		globalMap.put("tDie_6_SUBPROCESS_STATE", 0);
+		globalMap.put("tFileExist_1_SUBPROCESS_STATE", 0);
 
 		final boolean execStat = this.execStat;
 
@@ -3328,75 +2399,59 @@ public class ListasNegras implements TalendJob {
 				globalResumeTicket = true;
 
 				/**
-				 * [tDie_6 begin ] start
+				 * [tFileExist_1 begin ] start
 				 */
 
-				ok_Hash.put("tDie_6", false);
-				start_Hash.put("tDie_6", System.currentTimeMillis());
+				ok_Hash.put("tFileExist_1", false);
+				start_Hash.put("tFileExist_1", System.currentTimeMillis());
 
-				currentComponent = "tDie_6";
+				currentComponent = "tFileExist_1";
 
-				int tos_count_tDie_6 = 0;
+				int tos_count_tFileExist_1 = 0;
 
 				/**
-				 * [tDie_6 begin ] stop
+				 * [tFileExist_1 begin ] stop
 				 */
 
 				/**
-				 * [tDie_6 main ] start
+				 * [tFileExist_1 main ] start
 				 */
 
-				currentComponent = "tDie_6";
+				currentComponent = "tFileExist_1";
 
-				tLogCatcher_1.addMessage(
-						"tDie",
-						"tDie_6",
-						5,
-						"Error: Enviar archivos al servidor SFTP "
-								+ ((String) globalMap
-										.get("tFTPPut_1_ERROR_MESSAGE")), 4);
-				tLogCatcher_1Process(globalMap);
-
-				globalMap.put("tDie_6_DIE_PRIORITY", 5);
-				System.err.println("Error: Enviar archivos al servidor SFTP "
-						+ ((String) globalMap.get("tFTPPut_1_ERROR_MESSAGE")));
-
-				globalMap.put(
-						"tDie_6_DIE_MESSAGE",
-						"Error: Enviar archivos al servidor SFTP "
-								+ ((String) globalMap
-										.get("tFTPPut_1_ERROR_MESSAGE")));
-				globalMap.put(
-						"tDie_6_DIE_MESSAGES",
-						"Error: Enviar archivos al servidor SFTP "
-								+ ((String) globalMap
-										.get("tFTPPut_1_ERROR_MESSAGE")));
-				currentComponent = "tDie_6";
-				status = "failure";
-				errorCode = new Integer(4);
-				globalMap.put("tDie_6_DIE_CODE", errorCode);
-
-				if (true) {
-					throw new TDieException();
+				java.io.File file_tFileExist_1 = new java.io.File(context.ruta
+						+ context.archivoONU);
+				if (!file_tFileExist_1.exists()) {
+					globalMap.put("tFileExist_1_EXISTS", false);
+				} else {
+					globalMap.put("tFileExist_1_EXISTS", true);
 				}
 
-				tos_count_tDie_6++;
+				globalMap.put("tFileExist_1_FILENAME", context.ruta
+						+ context.archivoONU);
+
+				tos_count_tFileExist_1++;
 
 				/**
-				 * [tDie_6 main ] stop
+				 * [tFileExist_1 main ] stop
 				 */
 
 				/**
-				 * [tDie_6 end ] start
+				 * [tFileExist_1 end ] start
 				 */
 
-				currentComponent = "tDie_6";
+				currentComponent = "tFileExist_1";
 
-				ok_Hash.put("tDie_6", true);
-				end_Hash.put("tDie_6", System.currentTimeMillis());
+				ok_Hash.put("tFileExist_1", true);
+				end_Hash.put("tFileExist_1", System.currentTimeMillis());
+
+				if (execStat) {
+					runStat.updateStatOnConnection("OnComponentOk3", 0, "ok");
+				}
+				tWarn_3Process(globalMap);
 
 				/**
-				 * [tDie_6 end ] stop
+				 * [tFileExist_1 end ] stop
 				 */
 			}// end the resume
 
@@ -3416,13 +2471,13 @@ public class ListasNegras implements TalendJob {
 			try {
 
 				/**
-				 * [tDie_6 finally ] start
+				 * [tFileExist_1 finally ] start
 				 */
 
-				currentComponent = "tDie_6";
+				currentComponent = "tFileExist_1";
 
 				/**
-				 * [tDie_6 finally ] stop
+				 * [tFileExist_1 finally ] stop
 				 */
 			} catch (java.lang.Exception e) {
 				// ignore
@@ -3432,12 +2487,12 @@ public class ListasNegras implements TalendJob {
 			resourceMap = null;
 		}
 
-		globalMap.put("tDie_6_SUBPROCESS_STATE", 1);
+		globalMap.put("tFileExist_1_SUBPROCESS_STATE", 1);
 	}
 
-	public void tDie_5Process(final java.util.Map<String, Object> globalMap)
+	public void tWarn_3Process(final java.util.Map<String, Object> globalMap)
 			throws TalendException {
-		globalMap.put("tDie_5_SUBPROCESS_STATE", 0);
+		globalMap.put("tWarn_3_SUBPROCESS_STATE", 0);
 
 		final boolean execStat = this.execStat;
 
@@ -3457,86 +2512,54 @@ public class ListasNegras implements TalendJob {
 				globalResumeTicket = true;
 
 				/**
-				 * [tDie_5 begin ] start
+				 * [tWarn_3 begin ] start
 				 */
 
-				ok_Hash.put("tDie_5", false);
-				start_Hash.put("tDie_5", System.currentTimeMillis());
+				ok_Hash.put("tWarn_3", false);
+				start_Hash.put("tWarn_3", System.currentTimeMillis());
 
-				currentComponent = "tDie_5";
+				currentComponent = "tWarn_3";
 
-				int tos_count_tDie_5 = 0;
+				int tos_count_tWarn_3 = 0;
 
 				/**
-				 * [tDie_5 begin ] stop
+				 * [tWarn_3 begin ] stop
 				 */
 
 				/**
-				 * [tDie_5 main ] start
+				 * [tWarn_3 main ] start
 				 */
 
-				currentComponent = "tDie_5";
+				currentComponent = "tWarn_3";
 
-				tLogCatcher_1
-						.addMessage(
-								"tDie",
-								"tDie_5",
-								5,
-								"Error: Conectar al servidor "
-										+ context.servidorSftp
-										+ " "
-										+ ((String) globalMap
-												.get("tFTPConnection_1_ERROR_MESSAGE")),
-								4);
+				resumeUtil.addLog("USER_DEF_LOG", "NODE:tWarn_3", "", Thread
+						.currentThread().getId() + "", "WARN", "",
+						"Se descargó el archivo " + context.archivoONU, "", "");
+				tLogCatcher_1.addMessage("tWarn", "tWarn_3", 4,
+						"Se descargó el archivo " + context.archivoONU, 42);
 				tLogCatcher_1Process(globalMap);
+				globalMap.put("tWarn_3_WARN_MESSAGES",
+						"Se descargó el archivo " + context.archivoONU);
+				globalMap.put("tWarn_3_WARN_PRIORITY", 4);
+				globalMap.put("tWarn_3_WARN_CODE", 42);
 
-				globalMap.put("tDie_5_DIE_PRIORITY", 5);
-				System.err.println("Error: Conectar al servidor "
-						+ context.servidorSftp
-						+ " "
-						+ ((String) globalMap
-								.get("tFTPConnection_1_ERROR_MESSAGE")));
-
-				globalMap
-						.put("tDie_5_DIE_MESSAGE",
-								"Error: Conectar al servidor "
-										+ context.servidorSftp
-										+ " "
-										+ ((String) globalMap
-												.get("tFTPConnection_1_ERROR_MESSAGE")));
-				globalMap
-						.put("tDie_5_DIE_MESSAGES",
-								"Error: Conectar al servidor "
-										+ context.servidorSftp
-										+ " "
-										+ ((String) globalMap
-												.get("tFTPConnection_1_ERROR_MESSAGE")));
-				currentComponent = "tDie_5";
-				status = "failure";
-				errorCode = new Integer(4);
-				globalMap.put("tDie_5_DIE_CODE", errorCode);
-
-				if (true) {
-					throw new TDieException();
-				}
-
-				tos_count_tDie_5++;
+				tos_count_tWarn_3++;
 
 				/**
-				 * [tDie_5 main ] stop
+				 * [tWarn_3 main ] stop
 				 */
 
 				/**
-				 * [tDie_5 end ] start
+				 * [tWarn_3 end ] start
 				 */
 
-				currentComponent = "tDie_5";
+				currentComponent = "tWarn_3";
 
-				ok_Hash.put("tDie_5", true);
-				end_Hash.put("tDie_5", System.currentTimeMillis());
+				ok_Hash.put("tWarn_3", true);
+				end_Hash.put("tWarn_3", System.currentTimeMillis());
 
 				/**
-				 * [tDie_5 end ] stop
+				 * [tWarn_3 end ] stop
 				 */
 			}// end the resume
 
@@ -3556,13 +2579,13 @@ public class ListasNegras implements TalendJob {
 			try {
 
 				/**
-				 * [tDie_5 finally ] start
+				 * [tWarn_3 finally ] start
 				 */
 
-				currentComponent = "tDie_5";
+				currentComponent = "tWarn_3";
 
 				/**
-				 * [tDie_5 finally ] stop
+				 * [tWarn_3 finally ] stop
 				 */
 			} catch (java.lang.Exception e) {
 				// ignore
@@ -3572,7 +2595,1121 @@ public class ListasNegras implements TalendJob {
 			resourceMap = null;
 		}
 
-		globalMap.put("tDie_5_SUBPROCESS_STATE", 1);
+		globalMap.put("tWarn_3_SUBPROCESS_STATE", 1);
+	}
+
+	public void tFileExist_2Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tFileExist_2_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+
+			String currentMethodName = new java.lang.Exception()
+					.getStackTrace()[0].getMethodName();
+			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
+			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
+																					// the
+																					// resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tFileExist_2 begin ] start
+				 */
+
+				ok_Hash.put("tFileExist_2", false);
+				start_Hash.put("tFileExist_2", System.currentTimeMillis());
+
+				currentComponent = "tFileExist_2";
+
+				int tos_count_tFileExist_2 = 0;
+
+				/**
+				 * [tFileExist_2 begin ] stop
+				 */
+
+				/**
+				 * [tFileExist_2 main ] start
+				 */
+
+				currentComponent = "tFileExist_2";
+
+				java.io.File file_tFileExist_2 = new java.io.File(context.ruta
+						+ context.archivoOFAC);
+				if (!file_tFileExist_2.exists()) {
+					globalMap.put("tFileExist_2_EXISTS", false);
+				} else {
+					globalMap.put("tFileExist_2_EXISTS", true);
+				}
+
+				globalMap.put("tFileExist_2_FILENAME", context.ruta
+						+ context.archivoOFAC);
+
+				tos_count_tFileExist_2++;
+
+				/**
+				 * [tFileExist_2 main ] stop
+				 */
+
+				/**
+				 * [tFileExist_2 end ] start
+				 */
+
+				currentComponent = "tFileExist_2";
+
+				ok_Hash.put("tFileExist_2", true);
+				end_Hash.put("tFileExist_2", System.currentTimeMillis());
+
+				if (execStat) {
+					runStat.updateStatOnConnection("OnComponentOk4", 0, "ok");
+				}
+				tWarn_4Process(globalMap);
+				if (execStat) {
+					runStat.updateStatOnConnection("OnComponentOk7", 0, "ok");
+				}
+				tFTPConnection_1Process(globalMap);
+
+				/**
+				 * [tFileExist_2 end ] stop
+				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tFileExist_2 finally ] start
+				 */
+
+				currentComponent = "tFileExist_2";
+
+				/**
+				 * [tFileExist_2 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tFileExist_2_SUBPROCESS_STATE", 1);
+	}
+
+	public void tWarn_4Process(final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tWarn_4_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+
+			String currentMethodName = new java.lang.Exception()
+					.getStackTrace()[0].getMethodName();
+			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
+			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
+																					// the
+																					// resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tWarn_4 begin ] start
+				 */
+
+				ok_Hash.put("tWarn_4", false);
+				start_Hash.put("tWarn_4", System.currentTimeMillis());
+
+				currentComponent = "tWarn_4";
+
+				int tos_count_tWarn_4 = 0;
+
+				/**
+				 * [tWarn_4 begin ] stop
+				 */
+
+				/**
+				 * [tWarn_4 main ] start
+				 */
+
+				currentComponent = "tWarn_4";
+
+				resumeUtil
+						.addLog("USER_DEF_LOG",
+								"NODE:tWarn_4",
+								"",
+								Thread.currentThread().getId() + "",
+								"WARN",
+								"",
+								"Se descargó el archivo " + context.archivoOFAC,
+								"", "");
+				tLogCatcher_1.addMessage("tWarn", "tWarn_4", 4,
+						"Se descargó el archivo " + context.archivoOFAC, 42);
+				tLogCatcher_1Process(globalMap);
+				globalMap.put("tWarn_4_WARN_MESSAGES",
+						"Se descargó el archivo " + context.archivoOFAC);
+				globalMap.put("tWarn_4_WARN_PRIORITY", 4);
+				globalMap.put("tWarn_4_WARN_CODE", 42);
+
+				tos_count_tWarn_4++;
+
+				/**
+				 * [tWarn_4 main ] stop
+				 */
+
+				/**
+				 * [tWarn_4 end ] start
+				 */
+
+				currentComponent = "tWarn_4";
+
+				ok_Hash.put("tWarn_4", true);
+				end_Hash.put("tWarn_4", System.currentTimeMillis());
+
+				/**
+				 * [tWarn_4 end ] stop
+				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tWarn_4 finally ] start
+				 */
+
+				currentComponent = "tWarn_4";
+
+				/**
+				 * [tWarn_4 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tWarn_4_SUBPROCESS_STATE", 1);
+	}
+
+	public void tFileFetch_1Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tFileFetch_1_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+
+			String currentMethodName = new java.lang.Exception()
+					.getStackTrace()[0].getMethodName();
+			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
+			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
+																					// the
+																					// resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tFileFetch_1 begin ] start
+				 */
+
+				ok_Hash.put("tFileFetch_1", false);
+				start_Hash.put("tFileFetch_1", System.currentTimeMillis());
+
+				currentComponent = "tFileFetch_1";
+
+				int tos_count_tFileFetch_1 = 0;
+
+				/**
+				 * [tFileFetch_1 begin ] stop
+				 */
+
+				/**
+				 * [tFileFetch_1 main ] start
+				 */
+
+				currentComponent = "tFileFetch_1";
+
+				java.io.InputStream retIS_tFileFetch_1 = null;
+
+				class SocketFactory_tFileFetch_1
+						implements
+						org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory {
+
+					private javax.net.ssl.SSLContext sslcontext = null;
+
+					private javax.net.ssl.SSLContext createSSLContext() {
+						javax.net.ssl.SSLContext sslcontext = null;
+
+						try {
+							sslcontext = javax.net.ssl.SSLContext
+									.getInstance("SSL");
+							sslcontext
+									.init(null,
+											new javax.net.ssl.TrustManager[] { new TrustAnyTrustManager() },
+											new java.security.SecureRandom());
+						} catch (java.security.NoSuchAlgorithmException e) {
+
+							e.printStackTrace();
+						} catch (java.security.KeyManagementException e) {
+
+							e.printStackTrace();
+						}
+						return sslcontext;
+					}
+
+					private javax.net.ssl.SSLContext getSSLContext() {
+
+						if (this.sslcontext == null) {
+							this.sslcontext = createSSLContext();
+						}
+						return this.sslcontext;
+					}
+
+					public java.net.Socket createSocket(java.net.Socket socket,
+							String host, int port, boolean autoClose)
+							throws java.io.IOException,
+							java.net.UnknownHostException {
+						return getSSLContext().getSocketFactory().createSocket(
+								socket, host, port, autoClose);
+					}
+
+					public java.net.Socket createSocket(String host, int port)
+							throws java.io.IOException,
+							java.net.UnknownHostException {
+						return getSSLContext().getSocketFactory().createSocket(
+								host, port);
+					}
+
+					public java.net.Socket createSocket(String host, int port,
+							java.net.InetAddress clientHost, int clientPort)
+							throws java.io.IOException,
+							java.net.UnknownHostException {
+						return getSSLContext().getSocketFactory().createSocket(
+								host, port, clientHost, clientPort);
+					}
+
+					public java.net.Socket createSocket(
+							String host,
+							int port,
+							java.net.InetAddress localAddress,
+							int localPort,
+							org.apache.commons.httpclient.params.HttpConnectionParams params)
+							throws java.io.IOException,
+							java.net.UnknownHostException,
+							org.apache.commons.httpclient.ConnectTimeoutException {
+
+						if (params == null) {
+							throw new IllegalArgumentException(
+									"Parameters may not be null");
+						}
+						int timeout = params.getConnectionTimeout();
+						javax.net.SocketFactory socketfactory = getSSLContext()
+								.getSocketFactory();
+
+						if (timeout == 0) {
+							return socketfactory.createSocket(host, port,
+									localAddress, localPort);
+						} else {
+							java.net.Socket socket = socketfactory
+									.createSocket();
+							java.net.SocketAddress localaddr = new java.net.InetSocketAddress(
+									localAddress, localPort);
+							java.net.SocketAddress remoteaddr = new java.net.InetSocketAddress(
+									host, port);
+							socket.bind(localaddr);
+							socket.connect(remoteaddr, timeout);
+							return socket;
+						}
+					}
+
+					class TrustAnyTrustManager implements
+							javax.net.ssl.X509TrustManager {
+						public void checkClientTrusted(
+								java.security.cert.X509Certificate[] chain,
+								String authType)
+								throws java.security.cert.CertificateException {
+						}
+
+						public void checkServerTrusted(
+								java.security.cert.X509Certificate[] chain,
+								String authType)
+								throws java.security.cert.CertificateException {
+						}
+
+						public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+							return new java.security.cert.X509Certificate[] {};
+						}
+					}
+				}
+
+				if ((context.urlONU + context.archivoONU).toLowerCase()
+						.startsWith("https://")) {
+					org.apache.commons.httpclient.protocol.Protocol myhttps = new org.apache.commons.httpclient.protocol.Protocol(
+							"https", new SocketFactory_tFileFetch_1(), 443);
+					org.apache.commons.httpclient.protocol.Protocol
+							.registerProtocol("https", myhttps);
+				}
+
+				org.apache.commons.httpclient.HttpClient client_tFileFetch_1 = new org.apache.commons.httpclient.HttpClient();
+
+				client_tFileFetch_1.getHttpConnectionManager().getParams()
+						.setConnectionTimeout(1000);
+
+				client_tFileFetch_1
+						.getParams()
+						.setCookiePolicy(
+								org.apache.commons.httpclient.cookie.CookiePolicy.DEFAULT);
+
+				org.apache.commons.httpclient.methods.GetMethod method_tFileFetch_1 = new org.apache.commons.httpclient.methods.GetMethod(
+						context.urlONU + context.archivoONU);
+
+				boolean isContinue_tFileFetch_1 = true;
+				int status_tFileFetch_1;
+				String finalURL_tFileFetch_1 = context.urlONU
+						+ context.archivoONU;
+
+				try { // B_01
+
+					status_tFileFetch_1 = client_tFileFetch_1
+							.executeMethod(method_tFileFetch_1);
+
+					if (status_tFileFetch_1 != org.apache.commons.httpclient.HttpStatus.SC_OK) {
+						throw new java.lang.Exception("Method failed: "
+								+ method_tFileFetch_1.getStatusLine());
+					}
+
+				} catch (java.lang.Exception e) {
+
+					throw (e);
+
+				}
+
+				if (isContinue_tFileFetch_1) {
+
+					java.io.InputStream in_tFileFetch_1 = method_tFileFetch_1
+							.getResponseBodyAsStream();
+					String sDir_tFileFetch_1 = (context.ruta).trim();
+					String fileName_tFileFetch_1 = ("").trim();
+					// open directory
+					java.net.URL url_tFileFetch_1 = new java.net.URL(
+							finalURL_tFileFetch_1);
+					String sURIPath_tFileFetch_1 = "";
+					int iLastSlashIndex_tFileFetch_1 = 0;
+					sURIPath_tFileFetch_1 = url_tFileFetch_1.getFile();
+					iLastSlashIndex_tFileFetch_1 = sURIPath_tFileFetch_1
+							.lastIndexOf("/");
+
+					// if not input file name, get the name from URI
+					if ("".equals(fileName_tFileFetch_1)) {
+						if (iLastSlashIndex_tFileFetch_1 > 0
+								&& (!sURIPath_tFileFetch_1.endsWith("/"))) {
+							fileName_tFileFetch_1 = sURIPath_tFileFetch_1
+									.substring(iLastSlashIndex_tFileFetch_1 + 1);
+						} else {
+							fileName_tFileFetch_1 = "defaultfilename.txt";
+						}
+					}
+					java.io.File dir_tFileFetch_1 = new java.io.File(
+							sDir_tFileFetch_1);
+
+					// pretreatment
+					try {
+						java.io.File test_file_tFileFetch_1 = new java.io.File(
+								dir_tFileFetch_1, fileName_tFileFetch_1);
+						test_file_tFileFetch_1.getParentFile().mkdirs();
+
+						if (test_file_tFileFetch_1.createNewFile()) {
+							test_file_tFileFetch_1.delete();
+						}
+					} catch (java.lang.Exception e) {
+
+						fileName_tFileFetch_1 = "defaultfilename.txt";
+					}
+					java.io.File file_tFileFetch_1 = new java.io.File(
+							dir_tFileFetch_1, fileName_tFileFetch_1);
+					file_tFileFetch_1.getParentFile().mkdirs();
+					java.io.FileOutputStream out_tFileFetch_1 = new java.io.FileOutputStream(
+							file_tFileFetch_1);
+					byte[] buffer_tFileFetch_1 = new byte[1024];
+					int count_tFileFetch_1 = 0;
+
+					while ((count_tFileFetch_1 = in_tFileFetch_1
+							.read(buffer_tFileFetch_1)) > 0) {
+						out_tFileFetch_1.write(buffer_tFileFetch_1, 0,
+								count_tFileFetch_1);
+					}
+					// close opened object
+					in_tFileFetch_1.close();
+					out_tFileFetch_1.close();
+
+					method_tFileFetch_1.releaseConnection();
+
+				} // B_01
+				globalMap.put("tFileFetch_1_INPUT_STREAM", retIS_tFileFetch_1);
+
+				tos_count_tFileFetch_1++;
+
+				/**
+				 * [tFileFetch_1 main ] stop
+				 */
+
+				/**
+				 * [tFileFetch_1 end ] start
+				 */
+
+				currentComponent = "tFileFetch_1";
+
+				ok_Hash.put("tFileFetch_1", true);
+				end_Hash.put("tFileFetch_1", System.currentTimeMillis());
+
+				if (execStat) {
+					runStat.updateStatOnConnection("OnComponentOk1", 0, "ok");
+				}
+				tWarn_1Process(globalMap);
+
+				/**
+				 * [tFileFetch_1 end ] stop
+				 */
+			}// end the resume
+
+			if (resumeEntryMethodName == null || globalResumeTicket) {
+				resumeUtil
+						.addLog("CHECKPOINT",
+								"CONNECTION:SUBJOB_OK:tFileFetch_1:OnSubjobOk",
+								"", Thread.currentThread().getId() + "", "",
+								"", "", "", "");
+			}
+
+			if (execStat) {
+				runStat.updateStatOnConnection("OnSubjobOk1", 0, "ok");
+			}
+
+			tFileExist_1Process(globalMap);
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tFileFetch_1 finally ] start
+				 */
+
+				currentComponent = "tFileFetch_1";
+
+				/**
+				 * [tFileFetch_1 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tFileFetch_1_SUBPROCESS_STATE", 1);
+	}
+
+	public void tWarn_1Process(final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tWarn_1_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+
+			String currentMethodName = new java.lang.Exception()
+					.getStackTrace()[0].getMethodName();
+			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
+			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
+																					// the
+																					// resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tWarn_1 begin ] start
+				 */
+
+				ok_Hash.put("tWarn_1", false);
+				start_Hash.put("tWarn_1", System.currentTimeMillis());
+
+				currentComponent = "tWarn_1";
+
+				int tos_count_tWarn_1 = 0;
+
+				/**
+				 * [tWarn_1 begin ] stop
+				 */
+
+				/**
+				 * [tWarn_1 main ] start
+				 */
+
+				currentComponent = "tWarn_1";
+
+				resumeUtil.addLog("USER_DEF_LOG", "NODE:tWarn_1", "", Thread
+						.currentThread().getId() + "", "WARN", "",
+						"Se conecta a la url de la ONU", "", "");
+				tLogCatcher_1.addMessage("tWarn", "tWarn_1", 4,
+						"Se conecta a la url de la ONU", 42);
+				tLogCatcher_1Process(globalMap);
+				globalMap.put("tWarn_1_WARN_MESSAGES",
+						"Se conecta a la url de la ONU");
+				globalMap.put("tWarn_1_WARN_PRIORITY", 4);
+				globalMap.put("tWarn_1_WARN_CODE", 42);
+
+				tos_count_tWarn_1++;
+
+				/**
+				 * [tWarn_1 main ] stop
+				 */
+
+				/**
+				 * [tWarn_1 end ] start
+				 */
+
+				currentComponent = "tWarn_1";
+
+				ok_Hash.put("tWarn_1", true);
+				end_Hash.put("tWarn_1", System.currentTimeMillis());
+
+				/**
+				 * [tWarn_1 end ] stop
+				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tWarn_1 finally ] start
+				 */
+
+				currentComponent = "tWarn_1";
+
+				/**
+				 * [tWarn_1 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tWarn_1_SUBPROCESS_STATE", 1);
+	}
+
+	public void tFileFetch_2Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tFileFetch_2_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+
+			String currentMethodName = new java.lang.Exception()
+					.getStackTrace()[0].getMethodName();
+			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
+			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
+																					// the
+																					// resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tFileFetch_2 begin ] start
+				 */
+
+				ok_Hash.put("tFileFetch_2", false);
+				start_Hash.put("tFileFetch_2", System.currentTimeMillis());
+
+				currentComponent = "tFileFetch_2";
+
+				int tos_count_tFileFetch_2 = 0;
+
+				/**
+				 * [tFileFetch_2 begin ] stop
+				 */
+
+				/**
+				 * [tFileFetch_2 main ] start
+				 */
+
+				currentComponent = "tFileFetch_2";
+
+				java.io.InputStream retIS_tFileFetch_2 = null;
+
+				org.apache.commons.httpclient.HttpClient client_tFileFetch_2 = new org.apache.commons.httpclient.HttpClient();
+
+				client_tFileFetch_2.getHttpConnectionManager().getParams()
+						.setConnectionTimeout(1000);
+
+				client_tFileFetch_2
+						.getParams()
+						.setCookiePolicy(
+								org.apache.commons.httpclient.cookie.CookiePolicy.DEFAULT);
+
+				org.apache.commons.httpclient.methods.GetMethod method_tFileFetch_2 = new org.apache.commons.httpclient.methods.GetMethod(
+						context.urlOFAC + context.archivoOFAC);
+
+				boolean isContinue_tFileFetch_2 = true;
+				int status_tFileFetch_2;
+				String finalURL_tFileFetch_2 = context.urlOFAC
+						+ context.archivoOFAC;
+
+				try { // B_01
+
+					status_tFileFetch_2 = client_tFileFetch_2
+							.executeMethod(method_tFileFetch_2);
+
+					if (status_tFileFetch_2 != org.apache.commons.httpclient.HttpStatus.SC_OK) {
+						throw new java.lang.Exception("Method failed: "
+								+ method_tFileFetch_2.getStatusLine());
+					}
+
+				} catch (java.lang.Exception e) {
+
+					throw (e);
+
+				}
+
+				if (isContinue_tFileFetch_2) {
+
+					java.io.InputStream in_tFileFetch_2 = method_tFileFetch_2
+							.getResponseBodyAsStream();
+					String sDir_tFileFetch_2 = (context.ruta).trim();
+					String fileName_tFileFetch_2 = ("").trim();
+					// open directory
+					java.net.URL url_tFileFetch_2 = new java.net.URL(
+							finalURL_tFileFetch_2);
+					String sURIPath_tFileFetch_2 = "";
+					int iLastSlashIndex_tFileFetch_2 = 0;
+					sURIPath_tFileFetch_2 = url_tFileFetch_2.getFile();
+					iLastSlashIndex_tFileFetch_2 = sURIPath_tFileFetch_2
+							.lastIndexOf("/");
+
+					// if not input file name, get the name from URI
+					if ("".equals(fileName_tFileFetch_2)) {
+						if (iLastSlashIndex_tFileFetch_2 > 0
+								&& (!sURIPath_tFileFetch_2.endsWith("/"))) {
+							fileName_tFileFetch_2 = sURIPath_tFileFetch_2
+									.substring(iLastSlashIndex_tFileFetch_2 + 1);
+						} else {
+							fileName_tFileFetch_2 = "defaultfilename.txt";
+						}
+					}
+					java.io.File dir_tFileFetch_2 = new java.io.File(
+							sDir_tFileFetch_2);
+
+					// pretreatment
+					try {
+						java.io.File test_file_tFileFetch_2 = new java.io.File(
+								dir_tFileFetch_2, fileName_tFileFetch_2);
+						test_file_tFileFetch_2.getParentFile().mkdirs();
+
+						if (test_file_tFileFetch_2.createNewFile()) {
+							test_file_tFileFetch_2.delete();
+						}
+					} catch (java.lang.Exception e) {
+
+						fileName_tFileFetch_2 = "defaultfilename.txt";
+					}
+					java.io.File file_tFileFetch_2 = new java.io.File(
+							dir_tFileFetch_2, fileName_tFileFetch_2);
+					file_tFileFetch_2.getParentFile().mkdirs();
+					java.io.FileOutputStream out_tFileFetch_2 = new java.io.FileOutputStream(
+							file_tFileFetch_2);
+					byte[] buffer_tFileFetch_2 = new byte[1024];
+					int count_tFileFetch_2 = 0;
+
+					while ((count_tFileFetch_2 = in_tFileFetch_2
+							.read(buffer_tFileFetch_2)) > 0) {
+						out_tFileFetch_2.write(buffer_tFileFetch_2, 0,
+								count_tFileFetch_2);
+					}
+					// close opened object
+					in_tFileFetch_2.close();
+					out_tFileFetch_2.close();
+
+					method_tFileFetch_2.releaseConnection();
+
+				} // B_01
+				globalMap.put("tFileFetch_2_INPUT_STREAM", retIS_tFileFetch_2);
+
+				tos_count_tFileFetch_2++;
+
+				/**
+				 * [tFileFetch_2 main ] stop
+				 */
+
+				/**
+				 * [tFileFetch_2 end ] start
+				 */
+
+				currentComponent = "tFileFetch_2";
+
+				ok_Hash.put("tFileFetch_2", true);
+				end_Hash.put("tFileFetch_2", System.currentTimeMillis());
+
+				if (execStat) {
+					runStat.updateStatOnConnection("OnComponentOk2", 0, "ok");
+				}
+				tWarn_2Process(globalMap);
+
+				/**
+				 * [tFileFetch_2 end ] stop
+				 */
+			}// end the resume
+
+			if (resumeEntryMethodName == null || globalResumeTicket) {
+				resumeUtil
+						.addLog("CHECKPOINT",
+								"CONNECTION:SUBJOB_OK:tFileFetch_2:OnSubjobOk",
+								"", Thread.currentThread().getId() + "", "",
+								"", "", "", "");
+			}
+
+			if (execStat) {
+				runStat.updateStatOnConnection("OnSubjobOk2", 0, "ok");
+			}
+
+			tFileExist_2Process(globalMap);
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tFileFetch_2 finally ] start
+				 */
+
+				currentComponent = "tFileFetch_2";
+
+				/**
+				 * [tFileFetch_2 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tFileFetch_2_SUBPROCESS_STATE", 1);
+	}
+
+	public void tWarn_2Process(final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tWarn_2_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+
+			String currentMethodName = new java.lang.Exception()
+					.getStackTrace()[0].getMethodName();
+			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
+			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
+																					// the
+																					// resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tWarn_2 begin ] start
+				 */
+
+				ok_Hash.put("tWarn_2", false);
+				start_Hash.put("tWarn_2", System.currentTimeMillis());
+
+				currentComponent = "tWarn_2";
+
+				int tos_count_tWarn_2 = 0;
+
+				/**
+				 * [tWarn_2 begin ] stop
+				 */
+
+				/**
+				 * [tWarn_2 main ] start
+				 */
+
+				currentComponent = "tWarn_2";
+
+				resumeUtil.addLog("USER_DEF_LOG", "NODE:tWarn_2", "", Thread
+						.currentThread().getId() + "", "WARN", "",
+						"Se conecta a la url de la OFAC", "", "");
+				tLogCatcher_1.addMessage("tWarn", "tWarn_2", 4,
+						"Se conecta a la url de la OFAC", 42);
+				tLogCatcher_1Process(globalMap);
+				globalMap.put("tWarn_2_WARN_MESSAGES",
+						"Se conecta a la url de la OFAC");
+				globalMap.put("tWarn_2_WARN_PRIORITY", 4);
+				globalMap.put("tWarn_2_WARN_CODE", 42);
+
+				tos_count_tWarn_2++;
+
+				/**
+				 * [tWarn_2 main ] stop
+				 */
+
+				/**
+				 * [tWarn_2 end ] start
+				 */
+
+				currentComponent = "tWarn_2";
+
+				ok_Hash.put("tWarn_2", true);
+				end_Hash.put("tWarn_2", System.currentTimeMillis());
+
+				/**
+				 * [tWarn_2 end ] stop
+				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tWarn_2 finally ] start
+				 */
+
+				currentComponent = "tWarn_2";
+
+				/**
+				 * [tWarn_2 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tWarn_2_SUBPROCESS_STATE", 1);
+	}
+
+	public void tJava_1Process(final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tJava_1_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+
+			String currentMethodName = new java.lang.Exception()
+					.getStackTrace()[0].getMethodName();
+			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
+			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
+																					// the
+																					// resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tJava_1 begin ] start
+				 */
+
+				ok_Hash.put("tJava_1", false);
+				start_Hash.put("tJava_1", System.currentTimeMillis());
+
+				currentComponent = "tJava_1";
+
+				int tos_count_tJava_1 = 0;
+
+				context.ip = "servidor";
+				context.usuario = "usuario windows";
+				try {
+					context.usuario = System.getProperty("user.name"); // solo
+																		// usuario
+					// System.out.println(context.usuario);
+					// obtener ip
+					InetAddress IP = InetAddress.getLocalHost();
+					context.ip = IP.getHostAddress();
+					// System.out.println(context.ip); //solo ip
+					// System.out.println(IP.toString()); //usuario + ip
+				} catch (UnknownHostException ex) {
+					System.out
+							.println("Error al obtener usuario e ip del server");
+					// Logger.getLogger(JavaApp.class.getName()).log(Level.SEVERE,
+					// null, ex);
+				}
+
+				/**
+				 * [tJava_1 begin ] stop
+				 */
+
+				/**
+				 * [tJava_1 main ] start
+				 */
+
+				currentComponent = "tJava_1";
+
+				tos_count_tJava_1++;
+
+				/**
+				 * [tJava_1 main ] stop
+				 */
+
+				/**
+				 * [tJava_1 end ] start
+				 */
+
+				currentComponent = "tJava_1";
+
+				ok_Hash.put("tJava_1", true);
+				end_Hash.put("tJava_1", System.currentTimeMillis());
+
+				/**
+				 * [tJava_1 end ] stop
+				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tJava_1 finally ] start
+				 */
+
+				currentComponent = "tJava_1";
+
+				/**
+				 * [tJava_1 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tJava_1_SUBPROCESS_STATE", 1);
 	}
 
 	public static class row2Struct implements
@@ -5440,6 +5577,175 @@ public class ListasNegras implements TalendJob {
 		globalMap.put("tLogCatcher_1_SUBPROCESS_STATE", 1);
 	}
 
+	public void tLogRow_2Process(final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tLogRow_2_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+
+			String currentMethodName = new java.lang.Exception()
+					.getStackTrace()[0].getMethodName();
+			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
+			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
+																					// the
+																					// resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tLogRow_2 begin ] start
+				 */
+
+				ok_Hash.put("tLogRow_2", false);
+				start_Hash.put("tLogRow_2", System.currentTimeMillis());
+
+				currentComponent = "tLogRow_2";
+
+				int tos_count_tLogRow_2 = 0;
+
+				// /////////////////////
+
+				class Util_tLogRow_2 {
+
+					String[] des_top = { ".", ".", "-", "+" };
+
+					String[] des_head = { "|=", "=|", "-", "+" };
+
+					String[] des_bottom = { "'", "'", "-", "+" };
+
+					String name = "";
+
+					java.util.List<String[]> list = new java.util.ArrayList<String[]>();
+
+					int[] colLengths = new int[0];
+
+					public void addRow(String[] row) {
+
+						for (int i = 0; i < 0; i++) {
+							if (row[i] != null) {
+								colLengths[i] = Math.max(colLengths[i],
+										row[i].length());
+							}
+						}
+						list.add(row);
+					}
+
+					public void setTableName(String name) {
+
+						this.name = name;
+					}
+
+					public StringBuilder format() {
+
+						StringBuilder sb = new StringBuilder();
+
+						return sb;
+					}
+
+					public boolean isTableEmpty() {
+						if (list.size() > 1)
+							return false;
+						return true;
+					}
+				}
+				Util_tLogRow_2 util_tLogRow_2 = new Util_tLogRow_2();
+				util_tLogRow_2.setTableName("tLogRow_2");
+				util_tLogRow_2.addRow(new String[] {});
+				StringBuilder strBuffer_tLogRow_2 = null;
+				int nb_line_tLogRow_2 = 0;
+				// /////////////////////
+
+				/**
+				 * [tLogRow_2 begin ] stop
+				 */
+
+				/**
+				 * [tLogRow_2 main ] start
+				 */
+
+				currentComponent = "tLogRow_2";
+
+				tos_count_tLogRow_2++;
+
+				/**
+				 * [tLogRow_2 main ] stop
+				 */
+
+				/**
+				 * [tLogRow_2 end ] start
+				 */
+
+				currentComponent = "tLogRow_2";
+
+				// ////
+
+				java.io.PrintStream consoleOut_tLogRow_2 = null;
+				if (globalMap.get("tLogRow_CONSOLE") != null) {
+					consoleOut_tLogRow_2 = (java.io.PrintStream) globalMap
+							.get("tLogRow_CONSOLE");
+				} else {
+					consoleOut_tLogRow_2 = new java.io.PrintStream(
+							new java.io.BufferedOutputStream(System.out));
+					globalMap.put("tLogRow_CONSOLE", consoleOut_tLogRow_2);
+				}
+
+				consoleOut_tLogRow_2
+						.println(util_tLogRow_2.format().toString());
+				consoleOut_tLogRow_2.flush();
+				// ////
+				globalMap.put("tLogRow_2_NB_LINE", nb_line_tLogRow_2);
+
+				// /////////////////////
+
+				ok_Hash.put("tLogRow_2", true);
+				end_Hash.put("tLogRow_2", System.currentTimeMillis());
+
+				/**
+				 * [tLogRow_2 end ] stop
+				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tLogRow_2 finally ] start
+				 */
+
+				currentComponent = "tLogRow_2";
+
+				/**
+				 * [tLogRow_2 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tLogRow_2_SUBPROCESS_STATE", 1);
+	}
+
 	public void tPrejob_1Process(final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 		globalMap.put("tPrejob_1_SUBPROCESS_STATE", 0);
@@ -5540,121 +5846,6 @@ public class ListasNegras implements TalendJob {
 		}
 
 		globalMap.put("tPrejob_1_SUBPROCESS_STATE", 1);
-	}
-
-	public void tJava_1Process(final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tJava_1_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-
-			String currentMethodName = new java.lang.Exception()
-					.getStackTrace()[0].getMethodName();
-			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
-			if (resumeEntryMethodName == null || resumeIt || globalResumeTicket) {// start
-																					// the
-																					// resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tJava_1 begin ] start
-				 */
-
-				ok_Hash.put("tJava_1", false);
-				start_Hash.put("tJava_1", System.currentTimeMillis());
-
-				currentComponent = "tJava_1";
-
-				int tos_count_tJava_1 = 0;
-
-				context.ip = "servidor";
-				context.usuario = "usuario windows";
-				try {
-					context.usuario = System.getProperty("user.name"); // solo
-																		// usuario
-					// System.out.println(context.usuario);
-					// obtener ip
-					InetAddress IP = InetAddress.getLocalHost();
-					context.ip = IP.getHostAddress();
-					// System.out.println(context.ip); //solo ip
-					// System.out.println(IP.toString()); //usuario + ip
-				} catch (UnknownHostException ex) {
-					System.out
-							.println("Error al obtener usuario e ip del server");
-					// Logger.getLogger(JavaApp.class.getName()).log(Level.SEVERE,
-					// null, ex);
-				}
-
-				/**
-				 * [tJava_1 begin ] stop
-				 */
-
-				/**
-				 * [tJava_1 main ] start
-				 */
-
-				currentComponent = "tJava_1";
-
-				tos_count_tJava_1++;
-
-				/**
-				 * [tJava_1 main ] stop
-				 */
-
-				/**
-				 * [tJava_1 end ] start
-				 */
-
-				currentComponent = "tJava_1";
-
-				ok_Hash.put("tJava_1", true);
-				end_Hash.put("tJava_1", System.currentTimeMillis());
-
-				/**
-				 * [tJava_1 end ] stop
-				 */
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tJava_1 finally ] start
-				 */
-
-				currentComponent = "tJava_1";
-
-				/**
-				 * [tJava_1 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tJava_1_SUBPROCESS_STATE", 1);
 	}
 
 	public String resuming_logs_dir_path = null;
@@ -6092,6 +6283,6 @@ public class ListasNegras implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 154703 characters generated by Talend Open Studio for Data Integration on the
- * 22 de octubre de 2015 18:32:43 COT
+ * 159637 characters generated by Talend Open Studio for Data Integration on the
+ * 23 de octubre de 2015 17:51:45 COT
  ************************************************************************************************/
