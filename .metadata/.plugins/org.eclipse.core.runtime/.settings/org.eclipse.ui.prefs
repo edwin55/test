@@ -1,8 +1,0 @@
-CLOSE_EDITORS_ON_EXIT=true
-LOGINCOUNT=13
-eclipse.preferences.version=1
-exchange_downloaded_check_updates=true
-lastUSedProject=DESCARGALISTAS
-presentationFactoryId=org.talend.rcp.presentationfactory
-showIntro=false
-workspaceTasksDone=org.talend.core.InitConnectionsMigrationTask|org.talend.core.EmptyConnectionsMigrationTask|org.talend.designer.core.ui.preferences.migration.AddQuotesForStatLogsPreference|org.talend.migrationTool.InitWorkspaceMigrationTask|org.talend.repository.model.migration.ChangeProjectTechinicalName

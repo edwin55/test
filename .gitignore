@@ -1,5 +1,5 @@
-*.jar
-*.class
+.Java/
 .JETEmitters/
 .metadata/
-!.Java/target/classes/
+*.jar
+*.class
