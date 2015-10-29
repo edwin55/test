@@ -82,16 +82,27 @@
         <elementParameter xmi:id="_zNO3e3jhEeWNh73uwOWUKg" field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" contextMode="false"/>
       </parameters>
     </implicitContextSettings>
-    <ItemsRelations xmi:id="_6y1hcHjiEeWNh73uwOWUKg">
-      <baseItem xmi:id="_6y1hcXjiEeWNh73uwOWUKg" id="_-nvy8HjhEeWNh73uwOWUKg" version="0.1" type="job"/>
-      <relatedItems xmi:id="_6y1hcnjiEeWNh73uwOWUKg" id="Numeric" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_6y1hc3jiEeWNh73uwOWUKg" id="Relational" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_6y1hdHjiEeWNh73uwOWUKg" id="TalendString" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_6y1hdXjiEeWNh73uwOWUKg" id="DataOperation" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_6y1hdnjiEeWNh73uwOWUKg" id="StringHandling" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_6y1hd3jiEeWNh73uwOWUKg" id="TalendDataGenerator" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_6y1heHjiEeWNh73uwOWUKg" id="TalendDate" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_6y1heXjiEeWNh73uwOWUKg" id="Mathematical" version="Latest" type="routine"/>
+    <ItemsRelations xmi:id="_w2g88HztEeW-UqwRCELQdA">
+      <baseItem xmi:id="_w2g88XztEeW-UqwRCELQdA" id="_-nvy8HjhEeWNh73uwOWUKg" version="0.1" type="job"/>
+      <relatedItems xmi:id="_w2g88nztEeW-UqwRCELQdA" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_w2g883ztEeW-UqwRCELQdA" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_w2g89HztEeW-UqwRCELQdA" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_w2g89XztEeW-UqwRCELQdA" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_w2g89nztEeW-UqwRCELQdA" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_w2g893ztEeW-UqwRCELQdA" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_w2g8-HztEeW-UqwRCELQdA" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_w2g8-XztEeW-UqwRCELQdA" id="Mathematical" version="Latest" type="routine"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_w2g8-nztEeW-UqwRCELQdA">
+      <baseItem xmi:id="_w2g8-3ztEeW-UqwRCELQdA" id="_dl9SQHztEeW-UqwRCELQdA" version="0.1" type="job"/>
+      <relatedItems xmi:id="_w2g8_HztEeW-UqwRCELQdA" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_w2g8_XztEeW-UqwRCELQdA" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_w2g8_nztEeW-UqwRCELQdA" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_w2g8_3ztEeW-UqwRCELQdA" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_w2g9AHztEeW-UqwRCELQdA" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_w2g9AXztEeW-UqwRCELQdA" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_w2g9AnztEeW-UqwRCELQdA" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_w2g9A3ztEeW-UqwRCELQdA" id="Mathematical" version="Latest" type="routine"/>
     </ItemsRelations>
     <migrationTask xmi:id="_1aTXgHjXEeWHBpx5Vxbfwg" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_1aTXgXjXEeWHBpx5Vxbfwg" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>
