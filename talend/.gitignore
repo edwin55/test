@@ -1,0 +1,10 @@
+# ignore para talend workspace
+.Java/
+.JETEmitters/
+.metadata/
+*.jar
+*.class
+**/poms/
+# dirs excluidos
+EJEMPLO/
+tmp/
