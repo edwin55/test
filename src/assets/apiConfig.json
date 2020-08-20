@@ -1,0 +1,8 @@
+{
+	"urlBase": "http://api.openweathermap.org/data/2.5/forecast", 
+	"pais": {
+		"nombre": "Moscu",
+		"id": 524901,
+		"appid": "e4cdac38bd3592d547523d45c59f744d"
+	}
+}
