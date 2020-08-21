@@ -83,3 +83,17 @@ Definicion de reglas
 		border-radius: 0.6em;
 	}
 }
+
+/*disenio responsive*/
+@media all and (max-width: 499px) {
+	.contenedor{
+		width: 100%;
+		justify-content: center;
+	}
+} 
+
+@media all and (min-width: 500px) and (max-width: 1140px) {
+	.contenedor{
+		width: 100%;
+	}
+}
