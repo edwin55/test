@@ -15,7 +15,7 @@ export class ClimaComponent implements OnInit {
 	// metodos
 	constructor(private _http: HttpService) { }
 
-	//consulta la api y guarda los datos
+	//consulta la api y guarda los pronosticos
 	ngOnInit() {
 		this._clima = this._http.getPronosticoClima()
 		.subscribe( respuesta => {

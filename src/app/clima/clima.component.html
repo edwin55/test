@@ -1,28 +1,42 @@
-<p>clima works!</p>
-<ng-container *ngIf="_clima">
-	<div class="clima-box">
-		<div *ngFor="let pronostico of _clima.list | slice:0:_cuantos+10">
+<div class="contenedor-global" *ngIf="_clima">
+<div class="contenedor">
+	<section class="clima-box" *ngFor="let pronostico of _clima.list | slice:0:_cuantos">
+		<header>
 			<!-- pais y ciudad -->
-			<div>{{_clima.city.name | uppercase}}, {{ _clima.city.country}}</div>
+			<div class="nombre">{{_clima.city.name | uppercase}}, {{ _clima.city.country}}</div>
 			
 			<!-- temperatura Celsius = Kelvin - Constante -->
-			<div>{{ pronostico.main.temp - 273.15 | number:'1.0-0'}} &#8451;</div>
+			<div class="temp resaltado">{{ pronostico.main.temp - 273.15 | number:'1.0-0'}}&#176;</div>
+		</header>
 
+		<section class="centro">
 			<!-- volumen de lluvia ultimas 3 horas-->
-			<div *ngIf="pronostico.rain; else sinLluvia">
+			<div class="resaltado" *ngIf="pronostico.rain; else sinLluvia">
 				{{pronostico.rain['3h']}}
 			</div>
-			<ng-template #sinLluvia> 0 </ng-template>
-			<div class="label lluvia">Rain</div>
+			<ng-template #sinLluvia> <div class="resaltado">0</div> </ng-template>
+			<div class="label">rain</div>
+		</section>
 
-			<!-- velocidad del viento mph = m/s * Constante-->
-			<div class="label viento">Wind</div>
-			<div>{{ pronostico.wind.speed * (3600 / 1609) | number:'1.0-1' }}</div>
+		<footer>
+			<section class="viento">
+				<!-- velocidad del viento mph = m/s * Constante-->
+				<div class="espacio">Wind</div>
+				<div>{{ pronostico.wind.speed * (3600 / 1609) | number:'1.0-1' }}mph</div>
+			</section>
 
-			<!-- humedad -->
-			<div class="label humedad">Humidity</div>
-			<div>{{ pronostico.main.humidity }} &#37;</div>
-			<div><hr></div>
-		</div>
-	</div>
-</ng-container>
+			<section class="humedad">
+				<!-- humedad -->
+				<div class="espacio">Humidity</div>
+				<div>{{ pronostico.main.humidity }}&#37;</div>
+			</section>
+		</footer>
+	</section> <!-- ./clima-box -->
+
+</div> <!-- ./contenedor -->
+
+<div class="pie">
+	<button>Ver m&aacute;s</button>
+</div>
+
+</div> <!-- ./contenedor-global -->

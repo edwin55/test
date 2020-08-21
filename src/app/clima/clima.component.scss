@@ -1,0 +1,85 @@
+/**
+Variables globales
+*/
+$tamanio-box: 250px;
+$color-fondo: #1ecbcf;
+$color-fuente: #f5f5f5; 
+
+/**
+Mixins
+*/
+@mixin box-layout($espacio, $direccion, $justificacion){
+	flex-grow: $espacio;
+	display: flex;
+	flex-direction: $direccion;
+	justify-content: $justificacion;
+}
+@mixin cuadrado($tam){
+	width: $tam;
+	height: $tam;
+}
+/**
+Definicion de reglas
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+
+.contenedor-global{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff;
+}
+.contenedor{
+	@include box-layout(0, row, flex-start);
+	width: 1140px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	min-height: 50vh;
+	flex-wrap: wrap;
+} 	
+.clima-box{
+	@include cuadrado($tamanio-box);
+	@include box-layout(0, column, flex-start);
+	background-color: $color-fondo;
+	color: $color-fuente; 
+	text-transform: uppercase;
+	font-weight: 600;
+	margin:0 0.7em 0.7em 0;
+
+	header , footer {
+		@include box-layout(1, row, space-around);
+		align-items: center;
+
+		section {
+			text-align: center;
+		}
+	}
+
+	.centro{
+		@include box-layout(2, column, center);
+		text-align: center;
+
+		.label{
+			padding-top: 0.4em;
+		}
+	}
+}
+
+.resaltado{
+	font-size: 2.2em; /*26px;*/
+	font-weight: bold;
+}
+.espacio{
+	padding-bottom: 0.4em;
+}
+
+/*reglas adicionales*/
+.pie {
+	button{
+		background-color: #0066ff; /*deepskyblue;*/
+		color: #fff;
+		padding: 1em 2em;
+		margin-top: 1em;
+		border-radius: 0.6em;
+	}
+}
