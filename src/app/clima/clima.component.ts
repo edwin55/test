@@ -24,4 +24,9 @@ export class ClimaComponent implements OnInit {
 		})
 	}
 
+	//muestra los siguientes pronosticos
+	mostrar() {
+		let max = (typeof this._clima['cnt'] === 'undefined' || this._clima['cnt'] === null) ? 0 : this._clima['cnt'];
+		this._cuantos = (this._cuantos >= max) ? 1 : this._cuantos+5;
+	}
 }
