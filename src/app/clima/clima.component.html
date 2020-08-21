@@ -1,9 +1,9 @@
 <div class="contenedor-global" *ngIf="_clima">
 <div class="contenedor">
-	<section class="clima-box" *ngFor="let pronostico of _clima.list | slice:0:_cuantos">
+	<section class="clima-box" *ngFor="let pronostico of _clima['list'] | slice:0:_cuantos">
 		<header>
 			<!-- pais y ciudad -->
-			<div class="nombre">{{_clima.city.name | uppercase}}, {{ _clima.city.country}}</div>
+			<div class="nombre">{{_clima['city']['name'] | uppercase}}, {{ _clima['city']['country']}}</div>
 			
 			<!-- temperatura Celsius = Kelvin - Constante -->
 			<div class="temp resaltado">{{ pronostico.main.temp - 273.15 | number:'1.0-0'}}&#176;</div>
