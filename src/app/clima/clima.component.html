@@ -1,2 +1,28 @@
 <p>clima works!</p>
-<div>{{ _clima }}</div>
+<ng-container *ngIf="_clima">
+	<div class="clima-box">
+		<div *ngFor="let pronostico of _clima.list | slice:0:_cuantos+10">
+			<!-- pais y ciudad -->
+			<div>{{_clima.city.name | uppercase}}, {{ _clima.city.country}}</div>
+			
+			<!-- temperatura Celsius = Kelvin - Constante -->
+			<div>{{ pronostico.main.temp - 273.15 | number:'1.0-0'}} &#8451;</div>
+
+			<!-- volumen de lluvia ultimas 3 horas-->
+			<div *ngIf="pronostico.rain; else sinLluvia">
+				{{pronostico.rain['3h']}}
+			</div>
+			<ng-template #sinLluvia> 0 </ng-template>
+			<div class="label lluvia">Rain</div>
+
+			<!-- velocidad del viento mph = m/s * Constante-->
+			<div class="label viento">Wind</div>
+			<div>{{ pronostico.wind.speed * (3600 / 1609) | number:'1.0-1' }}</div>
+
+			<!-- humedad -->
+			<div class="label humedad">Humidity</div>
+			<div>{{ pronostico.main.humidity }} &#37;</div>
+			<div><hr></div>
+		</div>
+	</div>
+</ng-container>

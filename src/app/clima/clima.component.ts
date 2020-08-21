@@ -10,6 +10,7 @@ import {HttpService} from '../config/http.service';
 export class ClimaComponent implements OnInit {
 	//atributos
 	_clima: Object; //almacena data de la api
+	_cuantos: number = 1; //num elementos a mostrar
 	
 	// metodos
 	constructor(private _http: HttpService) { }
@@ -19,7 +20,7 @@ export class ClimaComponent implements OnInit {
 		this._clima = this._http.getPronosticoClima()
 		.subscribe( respuesta => {
 			this._clima = respuesta;
-			console.log(this._clima);
+			//console.log(this._clima);
 		})
 	}
 
